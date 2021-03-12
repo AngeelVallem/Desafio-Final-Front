@@ -1,0 +1,550 @@
+$font-t: "Work Sans", "HelveticaNeue", "Helvetica Neue", sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+
+  .notification {
+    background-color: #25b7f8;
+    height: 80px;
+    color: white;
+    font-size: 0.95rem;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 800;
+    font-family: $font-t;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  .logo-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    width: 100%;
+
+    .logo {
+      transform: rotate(-9deg);
+      border-radius: 5px;
+      margin-left: 10px;
+      padding-top: 8px;
+    }
+
+    .search {
+      padding-left: 30px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      img:first-of-type {
+        width: 28%;
+        margin-right: 25%;
+        max-width: 200px;
+      }
+
+      .logo2 {
+        display: none;
+      }
+
+      img:last-of-type {
+        width: 25%;
+        margin-right: 25%;
+        max-width: 250px;
+      }
+    }
+  }
+}
+
+.general-container {
+  width: 100%;
+  padding: 0% 5% 5% 5%;
+
+  .collection-top {
+    padding-top: 30px;
+
+    .title-col {
+      font-family: $font-t;
+      text-align: center;
+      font-size: 1.125rem;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .grid-col,
+    .grid-col2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+
+      .item {
+        width: 100%;
+        height: 25vh;
+        display: grid;
+        grid-template-columns: 1, 100%;
+        grid-template-rows: 80% 15% 10%;
+        grid-gap: 3px;
+        margin-bottom: 25px;
+
+        .item-pic1-1 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/classic-dad-hat-black-front-6043cefcafc19_345x550.jpg?v=1615056639");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-name,
+        .item-price {
+          font-family: $font-t;
+          text-align: center;
+          font-size: 0.7rem;
+          font-weight: bolder;
+          color: #060964;
+        }
+
+        .item-price {
+          font-size: 0.7rem;
+          font-weight: 800;
+        }
+
+        .item-pic1-2 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/womens-tri-blend-tee-clay-triblend-front-60423cf4d4213_345x550.jpg?v=1614953722");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic1-3 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/all-over-print-tote-black-15x15-mockup-604239d15b8a7_345x550.jpg?v=1614952917");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic1-4 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/unisex-premium-t-shirt-black-front-60423c438f0a9_345x550.jpg?v=1614953548");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic1-5 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/white-glossy-mug-11oz-handle-on-right-6042f7eb0ecc5_345x550.jpg?v=1615001670");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic1-6 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mens-champion-hoodie-black-front-60406aa71ae60_345x550.jpg?v=1614834347");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-1 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mockup-d31b1d8f_550x.jpg?v=1574125890");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-2 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/embroideredbackpack_550x.jpg?v=1575043548");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-3 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mockup-4a9fa466_550x.jpg?v=1556299109");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-4 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mockup-4358ab33_550x.jpg?v=1542642637");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-5 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mockup-0a09f3d3_550x.jpg?v=1575312240");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-6 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mockup-98fdde85_550x.jpg?v=1549646468");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-7 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mockup-1b26edcb_550x.jpg?v=1542642615");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-8 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mockup-03ab7499_550x.jpg?v=1558460410");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-9 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/Sticker_Collage_2019_550x.png?v=1566402781");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-10 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/dev-gift-card-edited_550x.png?v=1542650152");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-11 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mockup-5a41f96d_550x.jpg?v=15507903582");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-12 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mockup-75fb21cb_550x.jpg?v=1542642626");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-13 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mockup-840223d7_550x.jpg?v=1542642639");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-14 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mockup-fc07df67_550x.jpg?v=1548709322");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+
+        .item-pic2-15 {
+          width: 100%;
+          background-image: url("https://cdn.shopify.com/s/files/1/1626/8507/products/mockup-b1425ef6_550x.jpg?v=1568752376");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &:hover {
+            cursor: pointer;
+            opacity: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.center {
+  text-align: center;
+  margin-top: 20px;
+
+  .btn {
+    line-height: 1.5;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 2px;
+    border-color: black;
+    padding: 8px 15px;
+    background-color: white;
+    color: black;
+    font-family: $font-t;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: normal;
+    font-size: 14px;
+  }
+}
+
+footer {
+  margin: 5%;
+
+  .foot-1 {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    div {
+      font-family: $font-t;
+      font-size: 1rem;
+      text-align: center;
+      color: gray;
+      &:hover{
+        cursor: pointer;
+        color: blue;
+      }
+    }
+  }
+
+  .footer-2 {
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    span {
+      padding: 15px;
+      padding-top: 25px;
+      font-family: $font-t;
+      font-size: 0.8rem;
+      text-align: center;
+      color: gray;
+      &:hover{
+        cursor: pointer;
+        color: blue;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  .header {
+    padding-bottom: 45px;
+    .notification {
+      height: 45px;
+      padding-top: 10px;
+    }
+
+    .logo-search {
+      .logo {
+        display: none;
+      }
+
+      .search {
+        width: 100vw;
+        height: 7vh;
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+
+        img:first-of-type {
+          width: 10%;
+          align-self: center;
+          justify-self: start;
+          max-width: 2000px;
+          grid-column: 1;
+          margin-left: 10px;
+        }
+
+        .logo2 {
+          transform: rotate(-9deg);
+          border-radius: 5px;
+          margin-left: 0;
+          grid-column: 2;
+          display: unset;
+          margin: auto;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        img:last-of-type {
+          width: 10%;
+          max-width: 2000px;
+          grid-column: 3;
+          align-self: center;
+          justify-self: end;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .general-container {
+    .collection-top {
+      .grid-col2 {
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+        .item {
+          height: 35vh;
+        }
+      }
+
+      .grid-col {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .grid-col .item {
+        height: 70vh;
+        .item-name,
+        .item-price {
+          font-size: 0.9rem;
+          color: #060964;
+          align-self: center;
+        }
+
+        .item-price {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  margin: 0%;
+
+  .foot-1 {
+    width: 23vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    div {
+      color: #060964;
+    }
+  }
+
+  .footer-2 {
+    margin-top: 2vh;
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    span {
+      color: #060964;
+    }
+  }
+}
