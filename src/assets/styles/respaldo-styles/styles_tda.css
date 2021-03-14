@@ -143,8 +143,8 @@
   color: #060964;
 }
 
-.general-container .collection-top .grid-col .item .item-name,
-.general-container .collection-top .grid-col2 .item .item-name {
+.general-container .collection-top .grid-col .item .item-price,
+.general-container .collection-top .grid-col2 .item .item-price {
   font-size: 0.7rem;
   font-weight: 800;
 }
