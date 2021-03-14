@@ -1,397 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/font-awesome/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+    <title>Manage your containers on AWS ECS</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+          <!-- CONTENT -->
+        <div class="col-12">
+          <img
+            src="../Images/header-img.webp"
+            alt="img-header"
+            class="header-img-post"
+          />
+          <div class="post-title-content">
+            <h1 class="post-title">Manage your containers on AWS ECS</h1>
+            <div class="tag-wrapper">
+              <span class="tag-post aws">#aws</span>
+              <span class="tag-post docker">#docker</span>
+              <span class="tag-post tutorial">#tutorial</span>
+              <span class="tag-post vue">#vue</span>
+            </div>
+            <div class="author-data-header">
+              <img
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s--iYP2n_-7--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/559048/24a84e12-3373-43e0-90c4-bcaee2a12dcf.jpg"
+                alt="profile-pic-kevin"
+              />
+              <p>Kevin Odongo <span>Mar 6 ・ 4 min read</span></p>
+            </div>
+          </div>
+          <p>Hey Dev's</p>
+          <p>
+            How have the tutorials for docker been coming along?. So far we have
+            simplified how to learn Docker using two files, we have learned how
+            to push images to AWS ECR or Docker Hub.
+          </p>
+          <p>
+            For production, we will need to manage our containers. This is where
+            AWS ECS comes along.
+          </p>
+          <h1>Brief Explanation</h1>
+          <p>
+            Amazon Elastic Container Service (ECS) is a highly scalable,
+            high-performance container management service that supports Docker
+            containers and allows you to easily run applications on a managed
+            cluster of Amazon EC2 instances. Amazon ECS eliminates the need for
+            you to install, operate, and scale your own cluster management
+            infrastructure.
+          </p>
+          <h4>Benefits</h4>
+          <ul>
+            <li>Application first with Capacity Providers</li>
+            <li>Performance at scale</li>
+            <li>Secure</li>
+            <li>Reliable</li>
+            <li>Optimized for cost</li>
+          </ul>
+          <img src="../Images/image-1.jpeg" alt="img-1" />
+          <h4>Use cases</h4>
+          <ul>
+            <li>Hybrid Development</li>
+            <li>Batch processing</li>
+            <li>Machine learning</li>
+            <li>Web Applications</li>
+          </ul>
+          <h4>Pricing</h4>
+          <p>
+            There are two different charge models for Amazon Elastic Container
+            Service (ECS).
+          </p>
+          <ul>
+            <li>
+              Fargate launch Type Model
+              <br />
+              With Fargate, you pay for the amount of vCPU and memory resources
+              that your containerized application requests. Read more about the
+              pricing of Fargate
+              <a href="https://aws.amazon.com/fargate/pricing/"
+                >https://aws.amazon.com/fargate/pricing/</a
+              >
+            </li>
+            <li>
+              EC2 launch Type Model
+              <br />
+              There is no additional charge for EC2 launch type. You pay for AWS
+              resources (e.g. EC2 instances or EBS volumes) you create to store
+              and run your application. Read more about the pricing of EC2
+              <a href="https://aws.amazon.com/ec2/pricing/"
+                >https://aws.amazon.com/ec2/pricing/</a
+              >
+            </li>
+          </ul>
+          <p>
+            Now that we have a brief explanation of what AWS ECS is let us get
+            practical and learn how to deploy our containers on AWS ECS.
+          </p>
+          <ul>
+            <li>Tasks.</li>
+          </ul>
+          <p>
+            A task definition is like a blueprint for your application. Each
+            time that you launch a task in Amazon ECS, you specify a task
+            definition. The service then knows which Docker image to use for
+            containers, how many containers to use in the task, and the resource
+            allocation for each container.
+          </p>
+          <ul>
+            <li>Cluster</li>
+          </ul>
+          <p>
+            An Amazon ECS cluster is a logical grouping of tasks, services, and
+            container instances. When creating a cluster using the console,
+            Amazon ECS creates an AWS CloudFormation stack that takes care of
+            the Amazon EC2 instance creation, networking, and IAM configuration
+            for you.
+          </p>
+          <ul>
+            <li>Service</li>
+          </ul>
+          <p>
+            An Amazon ECS service enables you to run and maintain a specified
+            number of instances of a task definition simultaneously in an Amazon
+            ECS cluster. If any of your tasks should fail or stop for any
+            reason, the Amazon ECS service scheduler launches another instance
+            of your task definition to replace it in order to maintain the
+            desired number of tasks in the service.
+          </p>
+          <p>
+            The steps for deploying your images to ECS will be you need to
+            create a cluster, a Task definition with all the configuration, and
+            a service.
+          </p>
+          <p>
+            In our previous tutorial, we learned how to push our images to AWS
+            ECR and Docker Hub
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/stylepost.css">
-    <link rel="stylesheet" href="../assets/css/stylesnav.css">
-    <title>Post Hacking</title>
-</head>
-
-<body>
-    <header>
-        <nav>
-            <div class="left-wrapper">
-                <div class="hamburguer-menu">
-                    <label for="check" class="fas fa-bars"></label>
-                    <input id="check" type="checkbox">
-                    <div class="menu">
-                        <div class="menu-content">
-                            <div class="menu-header">
-                                <h4>DEV Community</h4>
-                                <!--<a href="./post.html" class="fas fa-times"></a>-->
-                                <label for="check" class="fas fa-times"></label>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="../Images/img-nav/home.svg" alt="home">
-                                <p>Home</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="../Images/img-nav/reading.svg" alt="Home">
-                                <p>Reading List</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="../Images/img-nav/papyrus.svg" alt="Home">
-                                <p>Listing</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="../Images/img-nav/microphone.svg" alt="Home">
-                                <p>Podcasts</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="../Images/img-nav/camera.svg" alt="Home">
-                                <p>Videos</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="../Images/img-nav/tag.svg" alt="Home">
-                                <p>Tags</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <p class="more">More...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <a href="../index.html"><img id="logo" src="../Images/img-nav/new-logo.svg" alt="logo-png"></a>
-                <input type="text" class="nav-input" placeholder="Search..">
+            <a href="https://dev.to/kevin_odongo35/aws-ecr-or-docker-hub-4m7o"
+              >https://dev.to/kevin_odongo35/aws-ecr-or-docker-hub-4m7o</a
+            >
+          </p>
+          <p>
+            We have a default Vue application. We built an image and pushed it
+            to AWS ECR. We will deploy this to the ECS cluster.
+          </p>
+          <img src="../Images/image-2.png" alt="img-2" />
+          <h1>STEPS</h1>
+          <ul>
+            <li>
+              Once we have our image in ECR then we can go ahead and deploy our
+              cluster. Search for ECS and click get started.
+            </li>
+          </ul>
+          <img src="../Images/image-3.png" alt="img-3" />
+          <ul>
+            <li>
+              Get the image URI from AWS ECR and configure the custom section
+              then click next.
+            </li>
+          </ul>
+          <img src="../Images/image-4.png" alt="img-4" />
+          <ul>
+            <li>In the next section select Application Load Balance.</li>
+          </ul>
+          <img src="../Images/image-5.png" alt="img-5" />
+          <p>
+            In AWS we will an Application Load Balancer to direct traffic to
+            each container. With ALB we can define different target groups and
+            assign them to different clusters.
+          </p>
+          <p>
+            <b
+              >Target group is used to route requests to one or more registered
+              targets.
+            </b>
+          </p>
+          <p>
+            Read more about Application Load Balance target groups
+            <a href="">
+              https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html
+            </a>
+          </p>
+          <p>Once done review and click create.</p>
+          <img src="../Images/image-6.png" alt="img-6" />
+          <p>
+            Once deployed go to EC2 Dashboard and search for Load Balancers. Get
+            the DNS Record. Your application should be running.
+          </p>
+          <img src="../Images/image-7.png" alt="img-7" />
+          <p>How to create a new version.</p>
+          <p>
+            Assume you have changed your website and would like to deploy a new
+            version. Build a new image with the new version and tag it then push
+            it to AWS ECS. In below image you can see i have two versions in my
+            ECR.
+          </p>
+          <img src="../Images/image-8.png" alt="img-8" />
+          <p>
+            Use the image to create a new task definition and update the
+            service.
+          </p>
+          <h1>CONCLUSION</h1>
+          <p>
+            This is just a quick way to get started with AWS ECS. In a large
+            production, you need to understand how to use Application Load
+            Balance especially configuring target groups because that is the way
+            traffic to your containers will be routed. Just as Nginx does.
+          </p>
+          <p>
+            I hope this will be helpful to someone who wants to get started with
+            ECS. In my own opinion using ECS is easy to get you started with
+            container orchestration.
+          </p>
+          <p>Thank you.</p>
+          <div class="discussion-wrapper">
+            <div class="discussion-header">
+              <h2>Discussion (0)</h2>
+              <button>Suscribe</button>
             </div>
-            <div class="right-wrapper">
-                <div class="nav-btn">
-                    Write a post
-                </div>
-                <img src="../Images/img-nav/lupa.svg" alt="lupa">
-                <img src="../Images/img-nav/chat.svg" alt="chat-img">
-                <img src="../Images/img-nav/notif.svg" alt="not-img">
-                <img class="nav-profile-pic"
-                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--nxs3OSdn--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/590732/7f070b38-4436-495a-8aaf-2c0312ee4b47.jpeg"
-                    alt="profile-pic">
+            <div class="discussion-body">
+              <img
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s--nxs3OSdn--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/590732/7f070b38-4436-495a-8aaf-2c0312ee4b47.jpeg"
+                alt="profile-pic"
+              />
+              <input type="text" placeholder="Add to the discussion" />
             </div>
-        </nav>
-    </header>
-
-    <section class="gral-container">
-        <div id="icons-nav-desktop" class="icons-nav">
-            <div class="icon-wrapper">
-                <img src="../Images/heart.svg" alt="heart-img">
-                <span>1</span>
+            <div class="discussion-footer">
+              <a href="#">Code of conduct</a>
+              <span>•</span>
+              <a href="#">Report abuse</a>
             </div>
-            <div class="icon-wrapper">
-                <img src="../Images/middle-icon.svg" alt="middle-icon-img">
-                <span>0</span>
-            </div>
-            <div class="icon-wrapper">
-                <img src="../Images/bookmark.svg" alt="bookmark-img">
-                <span>2</span>
-            </div>
-            <div class="icon-wrapper">
-                <img src="../Images/points-footer.svg" alt="points-img">
-            </div>
+          </div>
         </div>
-
-        <div class="post-container">
-            <aside class="aside-wrapper">
-
-                <div class="card-author">
-                    <div class="color-top"></div>
-                    <div class="author-data">
-                        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--iYP2n_-7--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/559048/24a84e12-3373-43e0-90c4-bcaee2a12dcf.jpg"
-                            alt="profile-pic-kevin">
-                        <p>Kevin Odongo</p>
-                    </div>
-                    <p class="author-desc">I am here to learn. Technology evolves every day and my passion is to learn
-                        and
-                        create applications that can change and make human day to day activity simple organized.</p>
-                    <div class="btn-wrapper">
-                        <button>Follow</button>
-                    </div>
-                    <div class="info">
-                        <p class="title-info">Work</p>
-                        <p class="desc-info">Software Developer</p>
-                    </div>
-                    <div class="info">
-                        <p class="title-info">Location</p>
-                        <p class="desc-info">Nairobi</p>
-                    </div>
-                    <div class="info">
-                        <p class="title-info">Joined</p>
-                        <p class="desc-info">Jan 13, 2021</p>
-                    </div>
+        <!-- ASIDE -->
+        <div class="col-12">
+            <div class="card-author">
+                <div class="color-top"></div>
+                <div class="author-data">
+                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--iYP2n_-7--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/559048/24a84e12-3373-43e0-90c4-bcaee2a12dcf.jpg"
+                        alt="profile-pic-kevin">
+                    <p>Kevin Odongo</p>
                 </div>
+                <p class="author-desc">I am here to learn. Technology evolves every day and my passion is to learn
+                    and
+                    create applications that can change and make human day to day activity simple organized.</p>
+                <div class="btn-wrapper">
+                    <button>Follow</button>
+                </div>
+                <div class="info">
+                    <p class="title-info">Work</p>
+                    <p class="desc-info">Software Developer</p>
+                </div>
+                <div class="info">
+                    <p class="title-info">Location</p>
+                    <p class="desc-info">Nairobi</p>
+                </div>
+                <div class="info">
+                    <p class="title-info">Joined</p>
+                    <p class="desc-info">Jan 13, 2021</p>
+                </div>
+            </div>
 
-                <section class="article-wrapper">
-                    <h3 class="title-container">More from <span>Kevin Odongo</span></h3>
-                    <div class="article-card">
-                        <p class="title-article">
-                            AWS ECR OR Docker Hub
-                        </p>
-                        <div class="tag-wrapper">
-                            <span class="tag-article">#webdev</span>
-                            <span class="tag-article">#docker</span>
-                            <span class="tag-article">#aws</span>
-                        </div>
-                    </div>
-                    <div class="article-card">
-                        <p class="title-article">
-                            Docker, Vue y Angular
-                        </p>
-                        <div class="tag-wrapper">
-                            <span class="tag-article">#webdev</span>
-                            <span class="tag-article">#vue</span>
-                            <span class="tag-article">#docker</span>
-                        </div>
-                    </div>
-                    <div class="article-card">
-                        <p class="title-article">
-                            Caching with Redis or Memcached and Node
-                        </p>
-                        <div class="tag-wrapper">
-                            <span class="tag-article">#webdev</span>
-                            <span class="tag-article">#tutorial</span>
-                            <span class="tag-article">#node</span>
-                        </div>
-                    </div>
-                </section>
-            </aside>
-            <section class="post-content">
-                <img src="../Images/header-img.webp" alt="img-header" class="header-img-post">
-                <div class="post-title-content">
-                    <h1 class="post-title">
-                        Manage your containers on AWS ECS
-                    </h1>
+            <section class="article-wrapper">
+                <h3 class="title-container">More from <span>Kevin Odongo</span></h3>
+                <div class="article-card">
+                    <p class="title-article">
+                        AWS ECR OR Docker Hub
+                    </p>
                     <div class="tag-wrapper">
-                        <span class="tag-post aws">#aws</span>
-                        <span class="tag-post docker">#docker</span>
-                        <span class="tag-post tutorial">#tutorial</span>
-                        <span class="tag-post vue">#vue</span>
-                    </div>
-                    <div class="author-data-header">
-                        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--iYP2n_-7--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/559048/24a84e12-3373-43e0-90c4-bcaee2a12dcf.jpg"
-                            alt="profile-pic-kevin">
-                        <p>Kevin Odongo <span>Mar 6 ・ 4 min read</span></p>
+                        <span class="tag-article">#webdev</span>
+                        <span class="tag-article">#docker</span>
+                        <span class="tag-article">#aws</span>
                     </div>
                 </div>
-                <p>Hey Dev's</p>
-                <p>How have the tutorials for docker been coming along?. So far we have simplified how to learn Docker
-                    using
-                    two files, we have learned how to push images to AWS ECR or Docker Hub.</p>
-                <p>For production, we will need to manage our containers. This is where AWS ECS comes along. </p>
-                <h1>Brief Explanation</h1>
-                <p>Amazon Elastic Container Service (ECS) is a highly scalable, high-performance container management
-                    service that supports Docker containers and allows you to easily run applications on a managed
-                    cluster
-                    of Amazon EC2 instances. Amazon ECS eliminates the need for you to install, operate, and scale your
-                    own
-                    cluster management infrastructure.</p>
-                <h4>Benefits</h4>
-                <ul>
-                    <li>Application first with Capacity Providers</li>
-                    <li>Performance at scale</li>
-                    <li>Secure</li>
-                    <li>Reliable</li>
-                    <li>Optimized for cost</li>
-                </ul>
-                <img src="../Images/image-1.jpeg" alt="img-1">
-                <h4>Use cases</h4>
-                <ul>
-                    <li>Hybrid Development</li>
-                    <li>Batch processing</li>
-                    <li>Machine learning</li>
-                    <li>Web Applications</li>
-                </ul>
-                <h4>Pricing</h4>
-                <p>There are two different charge models for Amazon Elastic Container Service (ECS).</p>
-                <ul>
-                    <li>Fargate launch Type Model
-                        <br />
-                        With Fargate, you pay for the amount of vCPU and memory resources that your containerized
-                        application requests. Read more about the pricing of Fargate
-                        <a href="https://aws.amazon.com/fargate/pricing/">https://aws.amazon.com/fargate/pricing/</a>
-                    </li>
-                    <li>
-                        EC2 launch Type Model
-                        <br />
-                        There is no additional charge for EC2 launch type. You pay for AWS resources (e.g. EC2 instances
-                        or
-                        EBS volumes) you create to store and run your application. Read more about the pricing of EC2
-                        <a href="https://aws.amazon.com/ec2/pricing/">https://aws.amazon.com/ec2/pricing/</a>
-                    </li>
-                </ul>
-                <p>Now that we have a brief explanation of what AWS ECS is let us get practical and learn how to deploy
-                    our
-                    containers on AWS ECS.</p>
-                <ul>
-                    <li>Tasks.</li>
-                </ul>
-                <p>A task definition is like a blueprint for your application. Each time that you launch a task in
-                    Amazon
-                    ECS, you specify a task definition. The service then knows which Docker image to use for containers,
-                    how
-                    many containers to use in the task, and the resource allocation for each container.</p>
-                <ul>
-                    <li>Cluster</li>
-                </ul>
-                <p>An Amazon ECS cluster is a logical grouping of tasks, services, and container instances. When
-                    creating a
-                    cluster using the console, Amazon ECS creates an AWS CloudFormation stack that takes care of the
-                    Amazon
-                    EC2 instance creation, networking, and IAM configuration for you.</p>
-                <ul>
-                    <li>Service</li>
-                </ul>
-                <p>An Amazon ECS service enables you to run and maintain a specified number of instances of a task
-                    definition simultaneously in an Amazon ECS cluster. If any of your tasks should fail or stop for any
-                    reason, the Amazon ECS service scheduler launches another instance of your task definition to
-                    replace it
-                    in order to maintain the desired number of tasks in the service.</p>
-                <p>The steps for deploying your images to ECS will be you need to create a cluster, a Task definition
-                    with
-                    all the configuration, and a service.</p>
-                <p>
-                    In our previous tutorial, we learned how to push our images to AWS ECR and Docker Hub
-
-                    <a
-                        href="https://dev.to/kevin_odongo35/aws-ecr-or-docker-hub-4m7o">https://dev.to/kevin_odongo35/aws-ecr-or-docker-hub-4m7o</a>
-                </p>
-                <p>We have a default Vue application. We built an image and pushed it to AWS ECR. We will deploy this to
-                    the
-                    ECS cluster. </p>
-                <img src="../Images/image-2.png" alt="img-2">
-                <h1>STEPS</h1>
-                <ul>
-                    <li>Once we have our image in ECR then we can go ahead and deploy our cluster. Search for ECS and
-                        click
-                        get started.</li>
-                </ul>
-                <img src="../Images/image-3.png" alt="img-3">
-                <ul>
-                    <li>
-                        Get the image URI from AWS ECR and configure the custom section then click next.
-                    </li>
-                </ul>
-                <img src="../Images/image-4.png" alt="img-4">
-                <ul>
-                    <li>
-                        In the next section select Application Load Balance.
-                    </li>
-                </ul>
-                <img src="../Images/image-5.png" alt="img-5">
-                <p>In AWS we will an Application Load Balancer to direct traffic to each container. With ALB we can
-                    define
-                    different target groups and assign them to different clusters. </p>
-                <p><b>Target group is used to route requests to one or more registered targets. </b></p>
-                <p>
-                    Read more about Application Load Balance target groups
-                    <a href="">
-                        https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html
-                    </a>
-                </p>
-                <p>Once done review and click create.</p>
-                <img src="../Images/image-6.png" alt="img-6">
-                <p>Once deployed go to EC2 Dashboard and search for Load Balancers. Get the DNS Record. Your application
-                    should be running.</p>
-                <img src="../Images/image-7.png" alt="img-7">
-                <p>How to create a new version.</p>
-                <p>Assume you have changed your website and would like to deploy a new version. Build a new image with
-                    the new version and tag it then push it to AWS ECS. In below image you can see i have two versions
-                    in my ECR.</p>
-                <img src="../Images/image-8.png" alt="img-8">
-                <p>Use the image to create a new task definition and update the service.</p>
-                <h1>CONCLUSION</h1>
-                <p>This is just a quick way to get started with AWS ECS. In a large production, you need to understand
-                    how to use Application Load Balance especially configuring target groups because that is the way
-                    traffic to your containers will be routed. Just as Nginx does.</p>
-                <p>I hope this will be helpful to someone who wants to get started with ECS. In my own opinion using ECS
-                    is easy to get you started with container orchestration.</p>
-                <p>Thank you.</p>
-                <div class="discussion-wrapper">
-                    <div class="discussion-header">
-                        <h2>Discussion (0)</h2>
-                        <button>Suscribe</button>
+                <div class="article-card">
+                    <p class="title-article">
+                        Docker, Vue y Angular
+                    </p>
+                    <div class="tag-wrapper">
+                        <span class="tag-article">#webdev</span>
+                        <span class="tag-article">#vue</span>
+                        <span class="tag-article">#docker</span>
                     </div>
-                    <div class="discussion-body">
-                        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--nxs3OSdn--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/590732/7f070b38-4436-495a-8aaf-2c0312ee4b47.jpeg"
-                            alt="profile-pic">
-                        <input type="text" placeholder="Add to the discussion">
-                    </div>
-                    <div class="discussion-footer">
-                        <a href="#">Code of conduct</a>
-                        <span>•</span>
-                        <a href="#">Report abuse</a>
+                </div>
+                <div class="article-card">
+                    <p class="title-article">
+                        Caching with Redis or Memcached and Node
+                    </p>
+                    <div class="tag-wrapper">
+                        <span class="tag-article">#webdev</span>
+                        <span class="tag-article">#tutorial</span>
+                        <span class="tag-article">#node</span>
                     </div>
                 </div>
             </section>
         </div>
-
-    </section>
-
-    <!--Footer-->
-    <footer>
-        <div class="footer-wrapper">
-            <div class="list-links">
-                <!--Etiquetas con Flex wrap y space between-->
-                <a href="#">Home</a>
-                <a href="#">Reading List</a>
-                <a href="#">Listings</a>
-                <a href="#">Podcasts</a>
-                <a href="#">Videos</a>
-                <a href="#">Tags</a>
-                <a href="#">Code of Conduct</a>
-                <a href="#">FAQ</a>
-                <a href="#">DEV Shop</a>
-                <a href="#">Sponsors</a>
-                <a href="#">About</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of use</a>
-                <a href="#">Contact</a>
-                <a href="#"><b>Write a post</b></a>
-                <div class="icons-group">
-                    <!--Iconos centrados JC+AI-->
-                    <p class="icon fab fa-twitter"></p>
-                    <p class="icon fab fab fa-facebook-square"></p>
-                    <p class="icon fab fa-github"></p>
-                    <p class="icon fab fa-instagram"></p>
-                    <p class="icon fab fa-twitch"></p>
-                </div>
-                <div class="separator"></div>
-            </div>
-            <div class="text-wrapper">
-                <!--Texto-->
-                <p><a href="#">DEV Community</a> – A constructive and inclusive social network for software developers.
-                    With
-                    you every step of your journey.</p>
-                <p>Built on <a href="">Forem</a> — the open source software that powers <a href="#">DEV</a> and other
-                    inclusive communities.</p>
-                <p>Made with love and <a href="#">Ruby on Rails</a>. DEV Community &copy; 2016 - 2021.</p>
-            </div>
-            <div class="logo-wrapper">
-                <!--Logo-->
-                <img src="../Images/logo-footer.svg" alt="logo-footer">
-            </div>
-        </div>
-        <img src="../Images/perezoso.png" alt="perezoso-img" class="perezoso-img">
-    </footer>
-
-    <div id="icons-nav-mobile">
-        <div class="icon-wrapper">
-            <img src="../Images/heart.svg" alt="heart-img">
+        <!-- POST-NAV-FEATURES -->
+        <div class="col-12 d-flex justify-content-around py-3 bg-primary">
+          <div>
+            <img src="../Images/heart.svg" alt="heart-img" />
             <span>1</span>
-        </div>
-        <div class="icon-wrapper">
-            <img src="../Images/middle-icon.svg" alt="middle-icon-img">
+          </div>
+          <div>
+            <img src="../Images/middle-icon.svg" alt="middle-icon-img" />
             <span>0</span>
-        </div>
-        <div class="icon-wrapper">
-            <img src="../Images/bookmark.svg" alt="bookmark-img">
+          </div>
+          <div>
+            <img src="../Images/bookmark.svg" alt="bookmark-img" />
             <span>2</span>
+          </div>
+          <div>
+            <img src="../Images/points-footer.svg" alt="points-img" />
+          </div>
         </div>
-        <div class="icon-wrapper">
-            <img src="../Images/points-footer.svg" alt="points-img">
-        </div>
+      </div>
     </div>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

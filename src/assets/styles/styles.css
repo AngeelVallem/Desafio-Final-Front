@@ -56,4 +56,16 @@
     margin: 0 auto;
   }
 }
+
+.sticky-pos {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1px;
+}
+
+/*Utilities*/
+/*Queries*/
 /*# sourceMappingURL=styles.css.map */
