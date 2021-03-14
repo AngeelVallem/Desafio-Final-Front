@@ -1,6 +1,7 @@
 # DesafioDeMaquetado
-Kodemia
-Autores
-@DemianMtz1
-@angeelvallem
-@towerstt
+## Kodemia
+---
+**Autores**
+* @DemianMtz1
+* @angeelvallem
+* @towerstt
