@@ -1,73 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/stylesnav.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="//fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet" type="text/css" media="all" />
+    <link href="//fonts.googleapis.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="icon" href="../Images/images-tda/logo.svg">
     <title>NAVBAR</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="left-wrapper">
-                <div class="hamburguer-menu">
-                    <label for="check" class="fas fa-bars"></label>
-                    <input id="check" type="checkbox">
-                    <div class="menu">
-                        <div class="menu-content">
-                            <div class="menu-header">
-                                <h4>DEV Community</h4>
-                                <!--<a href="./post.html" class="fas fa-times"></a>-->
-                                <label for="check" class="fas fa-times"></label>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="../Images/img-nav/home.svg" alt="home">
-                                <p>Home</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="../Images/img-nav/reading.svg" alt="Home">
-                                <p>Reading List</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="../Images/img-nav/papyrus.svg" alt="Home">
-                                <p>Listing</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="../Images/img-nav/microphone.svg" alt="Home">
-                                <p>Podcasts</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="../Images/img-nav/camera.svg" alt="Home">
-                                <p>Videos</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="../Images/img-nav/tag.svg" alt="Home">
-                                <p>Tags</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <p class="more">More...</p>
-                            </div>
-                        </div>
+
+    <div class="fixed-top">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-light p-4 container">
+                <div class="row flex-column w-100 fnt">
+                    <div class="col-12 mb-4">DEV Community</div>
+                    <div class="col-12 my-2">
+                        <img src="../Images/img-nav/home.svg" alt="home">
+                        Home
+                    </div>
+                    <div class="col-12 my-2">
+                        <img src="../Images/img-nav/reading.svg" alt="Home">
+                        Reading List 
+                    </div>
+                    <div class="col-12 my-2">
+                        <img src="../Images/img-nav/papyrus.svg" alt="Home">
+                        Listings    
+                    </div>
+                    <div class="col-12 my-2">
+                        <img src="../Images/img-nav/microphone.svg" alt="Home">
+                        Podcasts    
+                    </div>
+                    <div class="col-12 my-2">
+                        <img src="../Images/img-nav/camera.svg" alt="Home">
+                        Videos    
+                    </div>
+                    <div class="col-12 my-2">
+                        <img src="../Images/img-nav/tag.svg" alt="Home">
+                        Tags
+                    </div>
+                    <div class="col-12 mt-2 text-muted">More...    
                     </div>
                 </div>
-
-                <a href="../index.html"><img id="logo" src="../Images/img-nav/new-logo.svg" alt="logo-png"></a>
-                <input type="text" class="nav-input" placeholder="Search..">
             </div>
-            <div class="right-wrapper">
-                <div class="nav-btn">
-                    Write a post
+        </div>
+        <nav class="navbar navbar-light bg-white">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container w-70 pr-0 pl-0">
+                <div class="row align-items-center justify-content-end mr-1">
+                    <a class="col-3" href="#">
+                        <img class="devto-icon" src="../Images/images-tda/logo.svg" alt="">
+                    </a>
+                    <div class="col-1 mr-3">
+                        <img src="../Images/img-nav/lupa.svg" alt="lupa">
+                    </div>
+                    <div class="col-1 mr-3">
+                        <img src="../Images/img-nav/chat.svg" alt="chat-img">
+                    </div>
+                    <div class="col-1 mr-3">
+                        <img src="../Images/img-nav/notif.svg" alt="not-img">
+                    </div>
+                    <div class="col-1">
+                        <img class = "nav-profile-pic" src = "https://res.cloudinary.com/practicaldev/image/fetch/s--nxs3OSdn--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/590732/7f070b38-4436-495a-8aaf-2c0312ee4b47.jpeg" alt="profile-pic">
+                    </div>
                 </div>
-                <img src="../Images/img-nav/lupa.svg" alt="lupa">
-                <img src="../Images/img-nav/chat.svg" alt="chat-img">
-                <img src="../Images/img-nav/notif.svg" alt="not-img">
-                <img class="nav-profile-pic"
-                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--nxs3OSdn--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/590732/7f070b38-4436-495a-8aaf-2c0312ee4b47.jpeg"
-                    alt="profile-pic">
             </div>
         </nav>
-    </header>
+    </div>
+    <div class="bor pt-3"></div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
