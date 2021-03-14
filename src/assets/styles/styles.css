@@ -20,8 +20,8 @@
 }
 
 .img-footer-move:hover {
-  -webkit-transform: rotate(-0.01turn);
-          transform: rotate(-0.01turn);
+  -webkit-transform: rotate(-0.02turn);
+          transform: rotate(-0.02turn);
 }
 
 /*Utilities*/
