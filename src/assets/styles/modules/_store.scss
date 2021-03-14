@@ -1,0 +1,71 @@
+@import url('//fonts.googleapis.com/css?family=Work+Sans:400,700');
+@import url('//fonts.googleapis.com/css?family=Droid+Sans:700');
+
+* {
+    font-family: "Work Sans", "HelveticaNeue", "Helvetica Neue", sans-serif;
+    line-height: 1.2;
+}
+
+.hvr {
+    &:hover {
+        cursor: pointer;
+        opacity: .85;
+    }
+}
+
+.notif {
+    background-color: #25B7F8;
+    font-size: 1rem;
+}
+
+.img1 {
+    transform: rotate(-9deg);
+}
+
+.img2 {
+    height: 20px;
+    width: 20px;
+}
+
+.bor {
+    border-bottom: 2px solid gray;
+}
+
+.f-c {
+    color: #060964;
+    letter-spacing: .1rem;
+}
+
+.item-name,
+.item-name-1 {
+    font-size: 0.95rem;
+    color: #060964;
+
+}
+
+.item-price,
+.item-price-1 {
+    font-size: .85rem;
+}
+
+.butn {
+    border: 3px solid transparent;
+    border-radius: 2px;
+    border-color: black;
+    padding: 8px 15px;
+    background-color: white;
+    color: black;
+    letter-spacing: 0.08em;
+    font-size: .85rem;
+}
+
+.ftr {
+    color: #060964;
+}
+
+@media only screen and (min-width: 576px) {
+    .item-name {
+        font-size: 0.75rem;
+    }
+
+}
