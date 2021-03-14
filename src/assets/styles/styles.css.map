@@ -1,10 +1,11 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AGAA,AAAA,CAAC,CAAA;EACG,WAAW,EAAE,4HAC+C;EAC5D,WAAW,EAAE,GAAG;CACnB;;AAED,AAAA,QAAQ,CAAA;EACJ,gBAAgB,EAAE,OAAO;EACzB,SAAS,EAAE,IAAI;CAClB;;AAED,AAAA,KAAK,CAAA;EACD,SAAS,EAAE,aAAa;CAC3B;;AAED,AAAA,KAAK,CAAA;EACD,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CACd;;AAED,AAAA,IAAI,CAAA;EACA,aAAa,EAAE,cAAc;CAChC;;AAED,AAAA,IAAI,CAAA;EACA,KAAK,EAAE,OAAO;EACd,cAAc,EAAE,KAAK;CACxB;;AAED,AAAA,UAAU,CAAA;EACR,SAAS,EAAE,OAAO;EAClB,KAAK,EAAE,OAAO;CAEf;;AAED,AAAA,WAAW,CAAC;EACV,SAAS,EAAE,MAAM;CAClB",
     "sources": [
         "styles.scss",
         "modules/_variables.scss",
-        "modules/_footer.scss"
+        "modules/_footer.scss",
+        "modules/_store.scss"
     ],
     "names": [],
     "file": "styles.css"
