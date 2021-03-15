@@ -60,10 +60,176 @@
 .sticky-pos {
   position: -webkit-sticky;
   position: sticky;
-  bottom: 0px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   z-index: 1px;
+  background-color: #eef0f1;
+}
+
+.p-badge {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.aws {
+  background-color: #212b3a;
+  color: #faaf34 !important;
+}
+
+.docker {
+  background-color: #73c7e6;
+  color: #134871 !important;
+}
+
+.tutorial {
+  background-color: #feffa5;
+  color: #b30047 !important;
+}
+
+.vue {
+  background-color: #41b883;
+  color: #35495e !important;
+}
+
+.btn-outline-suscribe {
+  border: 1px solid #b5bdc4;
+  background-color: none;
+  color: #363d44;
+  padding: 6px 16px;
+}
+
+.btn-outline-suscribe:hover {
+  cursor: pointer;
+}
+
+.btn-follow {
+  background-color: #3b49df;
+  color: white;
+  padding: 8px 16px;
+}
+
+.img-profile {
+  height: 32px;
+  width: 32px;
+}
+
+.img-profile-2 {
+  height: 48px;
+  width: 48px;
+}
+
+.author-absolute {
+  padding: 0px 16px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+span {
+  color: #64707d;
+  font-size: 14px;
+}
+
+h1 {
+  color: #08090a;
+  font-size: 30px;
+}
+
+h2 {
+  color: #08090a;
+  font-size: 20px;
+}
+
+h4 {
+  color: #08090a;
+  font-size: 18px;
+}
+
+p {
+  font-size: 18px;
+  color: #08090a;
+  margin-bottom: 16px;
+}
+
+ul {
+  padding: 0 20px;
+}
+
+ul li {
+  font-size: 18px;
+}
+
+a {
+  overflow-wrap: break-word;
+  color: #3b49df;
+}
+
+textarea {
+  border: 1px solid #b5bdc4;
+  padding: 5px;
 }
 
 /*Utilities*/
+.text-color-title {
+  color: #08090a;
+}
+
+.text-color-btn {
+  color: #363d44;
+}
+
+.text-color-icon {
+  color: #64707d;
+}
+
+.text-color-card-black {
+  color: #4d5760;
+}
+
+.text-size-title {
+  font-size: 30px;
+}
+
+.text-size-icon {
+  font-size: 14px;
+}
+
+.text-size-paragraph {
+  font-size: 16px;
+}
+
+.text-size-span {
+  font-size: 12px;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-87 {
+  width: 87%;
+}
+
+.pt-6 {
+  padding-top: 2rem;
+}
+
+.bg-container {
+  background-color: #eef0f1;
+}
+
+.bg-card {
+  background-color: #f9fafa;
+}
+
+.bg-post-header {
+  background-color: black;
+}
+
+.border-bottom-post {
+  border-bottom: 1px solid #eef0f1;
+}
+
 /*Queries*/
 /*# sourceMappingURL=styles.css.map */
