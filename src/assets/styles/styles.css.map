@@ -7,7 +7,10 @@
         "modules/_footer.scss",
         "modules/_variables.scss",
         "modules/_post.scss",
-        "modules/_variables.scss"
+        "modules/_store-h.scss",
+        "modules/_navbar.scss",
+        "modules/_home.scss",
+
     ],
     "names": [],
     "file": "styles.css"
