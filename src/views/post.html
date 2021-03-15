@@ -16,25 +16,27 @@
   </head>
   <body>
     <div class="container-fluid bg-container">
-      <div class="row">
+      <div class="row pt-md-2 pr-md-2">
         <!-- CONTENT -->
-        <div class="bg-card col-12 shadow-sm mb-3 px-0">
-          <img src="../Images/header-img.webp" alt="img-header" class="w-100" />
+        <div 
+        class="bg-card col-12 shadow-sm mb-3 px-0 order-md-2 col-md-11 col-lg-7"
+        >
+          <img src="../Images/header-img.webp" alt="img-header" class="w-100 rounded-top" />
           <div class="d-flex flex-column px-3 py-2">
             <h1 class="font-weight-bold mb-3">
               Manage your containers on AWS ECS
             </h1>
             <div class="d-flex flex-row w-100 mb-3">
-              <span class="badge aws mr-2 p-badge font-weight-normal"
+              <span class="badge aws mr-2 p-badge font-weight-normal text-size-icon"
                 >#aws</span
               >
-              <span class="badge docker mr-2 p-badge font-weight-normal"
+              <span class="badge docker mr-2 p-badge font-weight-normal text-size-icon"
                 >#docker</span
               >
-              <span class="badge tutorial mr-2 p-badge font-weight-normal"
+              <span class="badge tutorial mr-2 p-badge font-weight-normal text-size-icon"
                 >#tutorial</span
               >
-              <span class="badge vue mr-2 p-badge font-weight-normal"
+              <span class="badge vue mr-2 p-badge font-weight-normal text-size-icon"
                 >#vue</span
               >
             </div>
@@ -265,7 +267,7 @@
           </div>
         </div>
         <!-- ASIDE -->
-        <aside class="col-12 shadow-sm mb-3 px-0">
+        <aside class="col-12 shadow-sm mb-3 px-0 order-md-3 col-md-11 col-lg-4">
           <div class="card shadow-sm rounded mb-3">
             <div
               class="bg-post-header w-100 pt-6 rounded-top position-relative"
@@ -338,8 +340,10 @@
           </div>
         </aside>
         <!-- POST-NAV-FEATURES -->
-        <div class="col-12 d-flex justify-content-around py-3 sticky-pos">
-          <div>
+        <div 
+        class="col-12 d-flex justify-content-around py-3 sticky-pos 
+        order-md-1 flex-md-column col-md-1 justify-content-md-start">
+          <div class="">
             <img src="../Images/heart.svg" alt="heart-img" />
             <span>1</span>
           </div>
