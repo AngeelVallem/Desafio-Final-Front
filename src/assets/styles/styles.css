@@ -309,6 +309,10 @@
           box-sizing: border-box;
 }
 
+body {
+  background-color: #eef0f1  !important;
+}
+
 .select-box {
   width: 5.7rem;
 }
@@ -339,41 +343,262 @@
   content: "";
   position: absolute;
   right: 24px;
-  top: 36px;
+  top: 30px;
   margin-top: -6px;
   border-top: 6px solid #000;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
 }
 
-.profile-p {
-  border-radius: 1rem;
-  height: 40px;
+.bg-lgrey {
+  background-color: #eef0f1;
 }
 
-.author-info {
+.bg-grey {
+  background-color: #d7d8da;
+}
+
+.bg-blue {
+  background-color: #323ebe;
+}
+
+.btn-grey {
+  color: #363d44 !important;
+  background-color: #d2d6db !important;
+  border-color: #000;
+}
+
+.btn-grey:hover {
+  background-color: #b5bdc4 !important;
+  color: #08090a !important;
+}
+
+.btn-blue {
+  color: #f9fafa !important;
+  background-color: #3b49df !important;
+  border-color: #323ebe;
+}
+
+.btn-blue:hover {
+  background-color: #323ebe !important;
+  color: #f9fafa !important;
+}
+
+header h3 {
+  font-size: 22px;
+}
+
+header .nav .nav-item {
+  padding: 4px 0;
+  position: relative;
+}
+
+header .nav .nav-item:hover {
+  background-color: rgba(50, 62, 189, 0.212);
+}
+
+header .nav .nav-item .nav-link {
+  color: #08090a;
+}
+
+header .nav .nav-item .active {
+  color: #000;
+  font-weight: 600;
+}
+
+header .nav .nav-item .active::after {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  left: 0rem;
+  width: 50%;
+  height: 0.2rem;
+  background-color: #323ebe;
+  margin-left: 14px;
+  border-radius: 0.5rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header .nav .nav-item .active:hover::after {
+  margin-left: 0;
+  width: 100%;
+}
+
+.post {
+  overflow: hidden;
+}
+
+.post a:hover {
+  text-decoration: none;
+}
+
+.post h1 {
+  color: #000;
+  font-size: 1.4rem;
+}
+
+.post h1:hover {
+  color: #323ebe;
+}
+
+.post .profile-p {
+  border-radius: 1rem;
+  height: 37px;
+}
+
+.post .author-info {
   height: 3rem;
 }
 
-.author-info p {
+.post .author-info p {
   margin-bottom: 0;
+  color: #64707d;
+  font-size: 0.7rem;
 }
 
-.h-post {
+.post .author-info p:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.post .author-info p:first-child {
+  font-size: 1rem;
+  color: #4d5760;
+}
+
+.post .author-info p:first-child:hover {
+  color: #000;
+}
+
+.post .h-post {
   list-style: none;
 }
 
-.h-post li {
+.post .h-post li {
   margin: 0 1rem;
 }
 
-.post-interactions {
+.post .h-post li a {
+  color: #4d5760;
+}
+
+.post .h-post li a:hover {
+  color: #000;
+}
+
+.post .post-interactions {
   padding: 0 0.7rem;
   margin-bottom: 1rem;
 }
 
-.post-interactions .interactions {
+.post .post-interactions p {
+  font-size: 12px;
+  color: #64707d;
+}
+
+.post .post-interactions .interactions {
   width: 10rem;
   height: 1.5rem;
+}
+
+.post .post-interactions .interactions div {
+  border-radius: 5px;
+}
+
+.post .post-interactions .interactions div:first-child {
+  margin-right: 20px;
+}
+
+.post .post-interactions .interactions div:hover {
+  cursor: pointer;
+  background-color: #d2d6db;
+  opacity: 1;
+}
+
+.left-aside a:hover {
+  text-decoration: none;
+}
+
+.left-aside ul {
+  list-style: none;
+}
+
+.left-aside ul li {
+  width: 90%;
+  padding: 0.4rem;
+  padding-left: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.left-aside ul li:hover {
+  background-color: rgba(8, 9, 10, 0.05);
+}
+
+.left-aside ul li img {
+  margin-right: 0.5rem;
+}
+
+.left-aside ul li a {
+  color: #202428;
+  font-size: 1rem;
+}
+
+.left-aside ul li a:hover {
+  text-decoration: none;
+}
+
+.left-aside ul li a:nth-child(7) {
+  color: rosybrown;
+}
+
+.left-aside .dashboard-aside img {
+  padding: 1px;
+  border-radius: 5px;
+}
+
+.left-aside .dashboard-aside img:hover {
+  cursor: pointer;
+  background-color: rgba(8, 9, 10, 0.05);
+}
+
+.left-aside a .store {
+  margin-top: 10rem;
+}
+
+.right-aside .aside-card {
+  overflow: hidden;
+}
+
+.right-aside .aside-card a {
+  color: #000;
+}
+
+.right-aside .aside-card a:hover {
+  color: #323ebe;
+  text-decoration: none;
+}
+
+.right-aside .aside-card a div {
+  padding-left: 10px;
+}
+
+.right-aside .aside-card a div:hover {
+  background-color: #fff;
+}
+
+.right-aside .aside-card header a h3 {
+  margin-left: 10px;
+}
+
+.right-aside .aside-card .text-blue {
+  color: #323ebe;
+}
+
+@media (min-width: 768px) {
+  .post .post-interactions .interactions {
+    width: 20rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
