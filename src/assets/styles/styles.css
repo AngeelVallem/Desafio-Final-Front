@@ -61,9 +61,10 @@
   }
 }
 
-* {
+#fontss {
   font-family: "Work Sans", "HelveticaNeue", "Helvetica Neue", sans-serif;
   line-height: 1.2;
+  background-color: white;
 }
 
 .hvr:hover {
@@ -125,6 +126,10 @@
   .item-name {
     font-size: 0.75rem;
   }
+}
+
+#homenvb {
+  background-color: white;
 }
 
 .bor {
@@ -457,8 +462,8 @@ textarea {
           box-sizing: border-box;
 }
 
-body {
-  background-color: #eef0f1  !important;
+#homee {
+  background-color: #eef0f1;
 }
 
 .select-box {
