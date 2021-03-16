@@ -184,6 +184,9 @@ textarea {
 }
 
 @media only screen and (min-width: 1025px) {
+  .fixed-pos {
+    left: 70px;
+  }
   .icon- {
     &nav {
       height: 24px;
@@ -220,5 +223,11 @@ textarea {
     &:hover{
       background-color: #8e96e7;
     }
+  }
+}
+
+@media only screen and (min-width: 1600px){
+  .fixed-pos {
+    left: 210px;
   }
 }
