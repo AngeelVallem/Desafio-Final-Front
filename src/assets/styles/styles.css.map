@@ -4,7 +4,12 @@
     "sources": [
         "styles.scss",
         "modules/_variables.scss",
-        "modules/_footer.scss"
+        "modules/_footer.scss",
+        "modules/_navbar.scss"
+        "modules/_post.scss",
+        "modules/_store-h.scss",
+        "modules/_home.scss",
+
     ],
     "names": [],
     "file": "styles.css"

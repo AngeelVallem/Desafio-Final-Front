@@ -1,742 +1,808 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link rel="stylesheet" href="assets/font-awesome/css/all.min.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/stylepost.css">
-    <link rel="stylesheet" href="assets/css/stylesnav.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
-    <title> Desafío Maquetado (Ángel, Demian, Hugo) </title>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
 
-<body>
+    <title>Desafío Maquetado (Ángel, Demian, Hugo)</title>
+  </head>
 
-    <header>
-        <nav>
-            <div class="left-wrapper">
-                <div class="hamburguer-menu">
-                    <label for="check" class="fas fa-bars"></label>
-                    <input id="check" type="checkbox">
-                    <div class="menu">
-                        <div class="menu-content">
-                            <div class="menu-header">
-                                <h4>DEV Community</h4>
-                                <!--<a href="./post.html" class="fas fa-times"></a>-->
-                                <label for="check" class="fas fa-times"></label>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="Images/img-nav/home.svg" alt="home">
-                                <p>Home</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="Images/img-nav/reading.svg" alt="Home">
-                                <p>Reading List</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="Images/img-nav/papyrus.svg" alt="Home">
-                                <p>Listing</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="Images/img-nav/microphone.svg" alt="Home">
-                                <p>Podcasts</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="Images/img-nav/camera.svg" alt="Home">
-                                <p>Videos</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <img src="Images/img-nav/tag.svg" alt="Home">
-                                <p>Tags</p>
-                            </div>
-                            <div class="icon-nav-wrapper">
-                                <p class="more">More...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#"><img src="Images/img-nav/new-logo.svg" alt="logo-png"></a>
-                <input type="text" class="nav-input" placeholder="Search..">
+  <body>
+    <!-- Navbar -->
+
+    <div class="fixed-top d-sm-none">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-light p-4 container">
+          <div class="row flex-column w-70 fnt">
+            <div class="col-12 mb-2 font-weight-bold fc1">DEV Community</div>
+            <div class="bor pt-3"></div>
+            <div class="col-12 mb-2 mt-4">
+              <img src="Images/img-nav/home.svg" alt="home" />
+              Home
             </div>
-            <div class="right-wrapper">
-                <div class="nav-btn">
-                    Write a post
-                </div>
-                <img src="Images/img-nav/lupa.svg" alt="lupa">
-                <img src="Images/img-nav/chat.svg" alt="chat-img">
-                <img src="Images/img-nav/notif.svg" alt="not-img">
-                <img class="nav-profile-pic"
-                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--nxs3OSdn--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/590732/7f070b38-4436-495a-8aaf-2c0312ee4b47.jpeg"
-                    alt="profile-pic">
+            <div class="col-12 my-2">
+              <img src="Images/img-nav/reading.svg" alt="Home" />
+              Reading List
             </div>
-        </nav>
-    </header>
-
-    <div class="general-container">
-
-        <!--ASIDE LEFT-->
-
-        <aside class="left-aside">
-            <ul>
-
-                <li><img src="Images/home2.svg" alt="home"><a href="#">Home</a></li>
-                <li><img src="Images/readinglist.svg" alt=""><a href="./views/post.html">Reading List</a></li>
-                <li><img src="Images/Listings.svg" alt=""><a href="#">Listings</a></li>
-                <li><img src="Images/Podcast.svg" alt=""><a href="#">Podcasts</a></li>
-                <li><img src="Images/Videos.svg" alt=""><a href="#">Videos</a></li>
-                <li><img src="Images/Tags.svg" alt=""><a href="#">Tags</a></li>
-                <li><a href="#">More...</a></li>
-            </ul>
-
-            <div>
-                <p>My tags</p>
-                <img src="Images/tagsDashboard.svg" alt="tagsdb">
+            <div class="col-12 my-2">
+              <img src="Images/img-nav/papyrus.svg" alt="Home" />
+              Listings
             </div>
-
-            <ul class="tags-aside">
-
-                <li><a href="#">#javascript</a></li>
-                <li><a href="#">#webdev</a></li>
-                <li><a href="#">#beginners</a></li>
-                <li><a href="#">#programming</a></li>
-
-            </ul>
-
-            <a href="./views/store.html">
-                <div class="shop">
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--pVCMYZWJ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://scontent-lga3-1.cdninstagram.com/vp/7c898e2c9e9fa71f72dd5d422d444549/5DFE1BFA/t51.2885-15/fr/e15/s1080x1080/57390242_386431405416711_440644832181536446_n.jpg%3F_nc_ht%3Dscontent-lga3-1.cdninstagram.com"
-                        alt="shop-img">
-                    <p> Got DEV Stickers Yet?</p>
-
-                </div>
-
+            <div class="col-12 my-2">
+              <img src="Images/img-nav/microphone.svg" alt="Home" />
+              Podcasts
+            </div>
+            <div class="col-12 my-2">
+              <img src="Images/img-nav/camera.svg" alt="Home" />
+              Videos
+            </div>
+            <div class="col-12 my-2">
+              <img src="Images/img-nav/tag.svg" alt="Home" />
+              Tags
+            </div>
+            <div class="col-12 mt-2 text-muted">More...</div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-light bg-white">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container w-70 pr-0 pl-0">
+          <div class="row align-items-center justify-content-end mr-1">
+            <a class="col-3" href="#">
+              <img
+                class="devto-icon"
+                src="../Images/images-tda/logo.svg"
+                alt=""
+              />
             </a>
-
-        </aside>
-
-        <section class="post-wrapper">
-
-
-
-
-            <!--Segunda Sección-->
-            <section class="header">
-                <!--Dos items con space between-->
-                <h1>Posts</h1>
-                <div class="select-box">
-                    <select name="select" class="select">
-                        <option disable selected>Feed</option>
-                        <option>Week</option>
-                        <option>Month</option>
-                        <option>Year</option>
-                        <option>Infinity</option>
-                        <option>Latest</option>
-                    </select>
-
-                </div>
-
-                <ul>
-                    <li><a href="#">Feed</a></li>
-                    <li><a href="#">Week</a></li>
-                    <li><a href="#">Month</a></li>
-                    <li><a href="#">Year</a></li>
-                    <li><a href="#">Infinity</a></li>
-                    <li><a href="#">Lastest</a></li>
-                </ul>
-
-
-            </section>
-
-
-
-
-            <!--Post principal-->
-            <div class="post">
-
-
-                <!--Imagen principal-->
-                <a href="./views/post.html">
-
-                    <img src="Images/post-img.jpeg" alt="post-img">
-                </a>
-
-
-                <div class="author-info">
-
-                    <!--Imagen de perfil-->
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--vL8tIW33--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/559048/24a84e12-3373-43e0-90c4-bcaee2a12dcf.jpg"
-                        alt="" class="profile-pic">
-                    <div class="author-name">
-                        <p>
-                            Kevin Odongo
-                        </p>
-                        <p>Mar 6 (17 hours ago) </p>
-                    </div>
-                </div>
-                <a href="./views/post.html">
-
-                    <h1>
-                        Manage your containers on AWS ECS
-                    </h1>
-                </a>
-
-                <ul>
-
-                    <li><a href="#">#aws</a></li>
-                    <li><a href="#">#docker</a></li>
-                    <li><a href="#">#tutorial</a></li>
-                    <li><a href="#">#vue</a></li>
-
-                </ul>
-
-                <div class="post-interactions">
-                    <!--footer del post principal-->
-                    <div class="interactions">
-
-                        <div>
-                            <img src="Images/heart2.svg" alt="like">
-                            <span>2</span>
-                            <span class="hidden">reactions</span>
-                            <img src="Images/comments.svg" alt="comment" class="ml">
-                            <span>0</span>
-                            <span class="hidden">comments</span>
-                        </div>
-
-
-
-
-                    </div>
-
-
-                    <div class="right">
-
-                        <p>6 min read</p>
-
-                        <div>Save</div>
-
-                    </div>
-
-                </div>
+            <div class="col-1 mr-3">
+              <img src="../Images/img-nav/lupa.svg" alt="lupa" />
             </div>
-
-
-
-            <!--Post secundario 1-->
-            <div class="post">
-
-                <!--Imagen principal-->
-
-                <div class="author-info">
-
-                    <!--Imagen de perfil-->
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--dAmoXHO3--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/405854/e2c4f335-3bd2-4b11-bab6-578c25060b62.jpg"
-                        alt="avatar2">
-                    <div class="author-name">
-                        <p>
-                            Kritika Srivastava
-                        </p>
-                        <p>Mar 8 (2 mins) </p>
-                    </div>
-                </div>
-                <a href="#">
-                    <h1>Few npm packages for using in your project</h1>
-                </a>
-
-                <ul>
-
-                    <li><a href="#">#npm</a></li>
-                    <li><a href="#">#beginners</a></li>
-                    <li><a href="#">#javascript</a></li>
-                    <li><a href="#">#react</a></li>
-
-                </ul>
-
-
-                <div class="post-interactions">
-                    <!--footer del post principal-->
-                    <div class="interactions">
-
-                        <div>
-                            <img src="Images/heart2.svg" alt="like">
-                            <span>37</span>
-                            <span class="hidden">reactions</span>
-                            <img src="Images/comments.svg" alt="comment" class="ml">
-                            <span>4</span>
-                            <span class="hidden">comments</span>
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="right">
-
-                        <p>7 min read</p>
-
-                        <div>Save</div>
-
-                    </div>
-
-                </div>
-
+            <div class="col-1 mr-3">
+              <img src="../Images/img-nav/chat.svg" alt="chat-img" />
             </div>
-
-            <!--Post secundario 2-->
-            <div class="post">
-
-                <!--Imagen principal-->
-
-                <div class="author-info">
-
-                    <!--Imagen de perfil-->
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--CdnRX_G1--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/587369/16a5958f-8f4a-4341-ab1f-0c6cecddb2c4.jpeg"
-                        alt="avatar2">
-                    <div class="author-name">
-                        <p>
-                            Florence O.
-                        </p>
-                        <p>Mar 8 (21 mins) </p>
-                    </div>
-                </div>
-                <a href="#">
-                    <h1>Nevertheless, Florence Coded Because Nothing Can Stop Her!</h1>
-                </a>
-
-                <ul>
-
-                    <li><a href="#">#shecode</a></li>
-                    <li><a href="#">#womenintech</a></li>
-                    <li><a href="#">#shecodedally</a></li>
-                    <li><a href="#">#choosetochallenge</a></li>
-
-                </ul>
-
-
-                <div class="post-interactions">
-                    <!--footer del post principal-->
-                    <div class="interactions">
-
-                        <div>
-                            <img src="Images/heart2.svg" alt="like">
-                            <span>26</span>
-                            <span class="hidden">reactions</span>
-                            <img src="Images/comments.svg" alt="comment" class="ml">
-                            <span>10</span>
-                            <span class="hidden">comments</span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="right">
-
-                        <p>7 min read</p>
-
-                        <div>Save</div>
-
-                    </div>
-
-                </div>
-
+            <div class="col-1 mr-3">
+              <img src="../Images/img-nav/notif.svg" alt="not-img" />
             </div>
-            <!--Post secundario 3-->
-            <div class="post">
-
-                <!--Imagen principal-->
-
-                <div class="author-info">
-
-                    <!--Imagen de perfil-->
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--A8JG5rF3--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/401660/a9ee09fc-8cd2-4c80-b906-bdcabf558e51.jpg"
-                        alt="avatar2">
-                    <div class="author-name">
-                        <p>
-                            M. Bagher Abiat
-                        </p>
-                        <p>Mar 6 (2 days ago) </p>
-                    </div>
-                </div>
-                <a href="#">
-
-                    <h1>Big useEffect mistake</h1>
-                </a>
-
-                <ul>
-
-                    <li><a href="#">#react</a></li>
-                    <li><a href="#">#webdev</a></li>
-                    <li><a href="#">#javascript</a></li>
-                    <li><a href="#">#performance</a></li>
-
-                </ul>
-
-
-                <div class="post-interactions">
-                    <!--footer del post principal-->
-                    <div class="interactions">
-
-                        <div>
-                            <img src="Images/heart2.svg" alt="like">
-                            <span>50</span>
-                            <span class="hidden">reactions</span>
-                            <img src="Images/comments.svg" alt="comment" class="ml">
-                            <span>9</span>
-                            <span class="hidden">comments</span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="right">
-
-                        <p>7 min read</p>
-
-                        <div>Save</div>
-
-                    </div>
-
-                </div>
-
+            <div class="col-1">
+              <img
+                class="nav-profile-pic"
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s--nxs3OSdn--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/590732/7f070b38-4436-495a-8aaf-2c0312ee4b47.jpeg"
+                alt="profile-pic"
+              />
             </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="bor pt-3 d-sm-none"></div>
+    <nav
+      class="d-none d-sm-flex navbar navbar-light bg-light justify-content-around"
+    >
+      <a class="navbar-brand" href="#">
+        <img class="devto.icon" src="Images/images-tda/logo.svg" alt="" />
+      </a>
+      <input type="text" class="nav-i" placeholder="Search.." />
+      <div class="right-wrapper">
+        <div class="nav-btn">Write a post</div>
+        <img src="Images/img-nav/chat.svg" alt="chat-img" />
+        <img src="Images/img-nav/notif.svg" alt="not-img" />
+        <img
+          class="nav-profile-pic"
+          src="https://res.cloudinary.com/practicaldev/image/fetch/s--nxs3OSdn--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/590732/7f070b38-4436-495a-8aaf-2c0312ee4b47.jpeg"
+          alt="profile-pic"
+        />
+      </div>
+    </nav>
 
-            <!--Post secundario 4-->
-            <div class="post">
-
-                <!--Imagen principal-->
-
-                <div class="author-info">
-
-                    <!--Imagen de perfil-->
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--NCf7UDz2--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/413463/6c63231b-8b51-4157-9ffc-5f675259da7f.png"
-                        alt="avatar2">
-                    <div class="author-name">
-                        <p>
-                            Colin Chartier
-                        </p>
-                        <p>Mar 6 (2 days ago) </p>
-                    </div>
-                </div>
-                <a href="#">
-
-                    <h1>Taking your JS Skills to the Next Level { with The Most Powerful JS_Tutorial }</h1>
-                </a>
-
-                <ul>
-
-                    <li><a href="#">#learning</a></li>
-                    <li><a href="#">#javascript</a></li>
-                    <li><a href="#">#tutorial</a></li>
-
-
-                </ul>
-
-
-                <div class="post-interactions">
-                    <!--footer del post principal-->
-                    <div class="interactions">
-
-                        <div>
-                            <img src="Images/heart2.svg" alt="like">
-                            <span>31</span>
-                            <span class="hidden">reactions</span>
-                            <img src="Images/comments.svg" alt="comment" class="ml">
-                            <span>9</span>
-                            <span class="hidden">comments</span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="right">
-
-                        <p>7 min read</p>
-
-                        <div>Save</div>
-
-                    </div>
-
-                </div>
-
+    <!-- content -->
+    <div class="container-fluid container-lg">
+      <div class="row">
+        <div class="col-md-3 col-lg-3 d-md-flex d-none p-0 mt-3 pl-2">
+          <!-- Left Aside -->
+          <aside class="left-aside">
+            <ul>
+              <li>
+                <img src="Images/home2.svg" alt="home" /><a href="#">Home</a>
+              </li>
+              <li>
+                <img src="Images/readinglist.svg" alt="" /><a href="post1.html"
+                  >Reading List</a
+                >
+              </li>
+              <li>
+                <img src="Images/Listings.svg" alt="" /><a href="#">Listings</a>
+              </li>
+              <li>
+                <img src="Images/Podcast.svg" alt="" /><a href="#">Podcasts</a>
+              </li>
+              <li>
+                <img src="Images/Videos.svg" alt="" /><a href="#">Videos</a>
+              </li>
+              <li><img src="Images/Tags.svg" alt="" /><a href="#">Tags</a></li>
+              <li><a class="ml-4 text-secondary" href="#">More...</a></li>
+            </ul>
+            <div class="dashboard-aside d-flex w-100 justify-content-between">
+              <p>My tags</p>
+              <img
+                class="mb-3"
+                src="Images/tagsDashboard.svg"
+                alt="dashboard-aside"
+              />
             </div>
+            <ul class="mb-5">
+              <li><a href="#">#javascript</a></li>
+              <li><a href="#">#webdev</a></li>
+              <li><a href="#">#beginners</a></li>
+              <li><a href="#">#programming</a></li>
+            </ul>
+            <a href="views/store.html">
+              <div class="store">
+                <img
+                  class="w-100 rounded"
+                  src="https://res.cloudinary.com/practicaldev/image/fetch/s--pVCMYZWJ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://scontent-lga3-1.cdninstagram.com/vp/7c898e2c9e9fa71f72dd5d422d444549/5DFE1BFA/t51.2885-15/fr/e15/s1080x1080/57390242_386431405416711_440644832181536446_n.jpg%3F_nc_ht%3Dscontent-lga3-1.cdninstagram.com"
+                  alt="shop-img"
+                />
+                <p class="text-center">Got DEV Stickers Yet?</p>
+              </div>
+            </a>
+          </aside>
+        </div>
 
-            <!--Post secundario 5-->
-            <div class="post">
-
-                <!--Imagen principal-->
-
-                <div class="author-info">
-
-                    <!--Imagen de perfil-->
-                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Kcu5py0m--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/294302/b8052502-9903-46e2-a6f3-ba477c85de69.jpg"
-                        alt="avatar2">
-                    <div class="author-name">
-                        <p>
-                            Animesh Pandey
-                        </p>
-                        <p>Mar 5 (3 days ago) </p>
-                    </div>
-                </div>
-                <a href="">
-
-                    <h1>Solution: Design HashMap (ver. 1)</h1>
-                </a>
-
-                <ul>
-
-                    <li><a href="#">#algorithms</a></li>
-                    <li><a href="#">#javascript</a></li>
-                    <li><a href="#">#java</a></li>
-                    <li><a href="#">#python</a></li>
-
-                </ul>
-
-
-                <div class="post-interactions">
-                    <!--footer del post principal-->
-                    <div class="interactions">
-
-                        <div>
-                            <img src="Images/heart2.svg" alt="like">
-                            <span>6</span>
-                            <span class="hidden">reactions</span>
-                            <img src="Images/comments.svg" alt="comment" class="ml">
-                            <span>2</span>
-                            <span class="hidden">comments</span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="right">
-
-                        <p>7 min read</p>
-
-                        <div>Save</div>
-
-                    </div>
-
-                </div>
-
+        <div class="col-12 col-md-9 col-lg-6 p-0 px-md-2">
+          <!-- header content -->
+          <header
+            class="d-flex justify-content-between align-items-center mt-1 px-2"
+          >
+            <h3 class="pt-2">Posts</h3>
+            <!-- Select Box -->
+            <div class="select-box d-md-none">
+              <select name="select" class="select">
+                <option disable selected>Feed</option>
+                <option>Week</option>
+                <option>Month</option>
+                <option>Year</option>
+                <option>Infinity</option>
+                <option>Latest</option>
+              </select>
             </div>
-        </section>
+            <!-- Navs  -->
+            <ul class="nav d-none d-md-flex">
+              <li class="nav-item rounded-top">
+                <a class="nav-link my-0 p-0 mx-2 active" href="#">Feed</a>
+              </li>
+              <li class="nav-item rounded-top">
+                <a class="nav-link my-0 p-0 mx-2 text-black" href="#">Week</a>
+              </li>
+              <li class="nav-item rounded-top">
+                <a class="nav-link my-0 p-0 mx-2 text-black" href="#">Month</a>
+              </li>
+              <li class="nav-item rounded-top">
+                <a class="nav-link my-0 p-0 mx-2 text-black" href="#">Year</a>
+              </li>
+              <li class="nav-item rounded-top">
+                <a class="nav-link my-0 p-0 mx-2 text-black" href="#"
+                  >Infinity</a
+                >
+              </li>
+              <li class="nav-item rounded-top">
+                <a class="nav-link my-0 p-0 mx-2 text-black" href="#">Latest</a>
+              </li>
+            </ul>
+          </header>
 
+          <!-- Post principal -->
+          <div class="post w-100 border bg-white rounded g-white mt-2">
+            <!--Imagen principal-->
+            <a href="views/post.html">
+              <img class="w-100" src="Images/post-img.jpeg" alt="post-img" />
+            </a>
+            <div class="d-flex mt-3">
+              <!--Imagen de perfil-->
+              <img
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s--vL8tIW33--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/559048/24a84e12-3373-43e0-90c4-bcaee2a12dcf.jpg"
+                alt=""
+                class="rounded-circle profile-p ml-3"
+              />
+              <div class="author-info ml-2">
+                <p>Kevin Odongo</p>
+                <p>Mar 6 (17 hours ago)</p>
+              </div>
+            </div>
+            <a href="views/post.html">
+              <h1 class="ml-3">Manage your containers on AWS ECS</h1>
+            </a>
+            <ul class="h-post d-flex w-100 flex-wrap">
+              <li><a href="#">#aws</a></li>
+              <li><a href="#">#docker</a></li>
+              <li><a href="#">#tutorial</a></li>
+              <li><a href="#">#vue</a></li>
+            </ul>
+            <div
+              class="post-interactions d-flex justify-content-between align-items-center w-md-25"
+            >
+              <!--footer del post principal-->
+              <div class="interactions d-flex">
+                <div>
+                  <img src="Images/heart2.svg" alt="like" />
+                  <span>2</span>
+                  <span class="d-none d-md-inline">reactions</span>
+                </div>
+                <div>
+                  <img src="Images/comments.svg" alt="comment" />
+                  <span>0</span>
+                  <span class="d-none d-md-inline">comments</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <p class="mb-0">6 min read</p>
+                <button class="ml-2 btn btn-grey">Save</button>
+              </div>
+            </div>
+          </div>
+          <!-- Post secundario 1 -->
+          <div class="post w-1bg-white rounded mt-2 bg-white">
+            <!--Imagen principal-->
+            <div class="d-flex mt-3">
+              <!--Imagen de perfil-->
+              <img
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s--dAmoXHO3--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/405854/e2c4f335-3bd2-4b11-bab6-578c25060b62.jpg"
+                alt=""
+                class="rounded-circle profile-p ml-3"
+              />
+              <div class="author-info ml-2">
+                <p>Kritika Srivastava</p>
+                <p>Mar 8 (2 mins)</p>
+              </div>
+            </div>
+            <a href="#">
+              <h1 class="ml-3">Few npm packages for using in your project</h1>
+            </a>
+            <ul class="h-post d-flex w-100 flex-wrap">
+              <li><a href="#">#npm</a></li>
+              <li><a href="#">#beginners</a></li>
+              <li><a href="#">#javascript</a></li>
+              <li><a href="#">#react</a></li>
+            </ul>
+            <div
+              class="post-interactions d-flex justify-content-between align-items-center"
+            >
+              <div class="interactions d-flex">
+                <div>
+                  <img src="Images/heart2.svg" alt="like" />
+                  <span>37</span>
+                  <span class="d-none d-md-inline">reactions</span>
+                </div>
+                <div>
+                  <img src="Images/comments.svg" alt="comment" class="ml" />
+                  <span>4</span>
+                  <span class="d-none d-md-inline">comments</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <p class="mb-0">7 min read</p>
+                <button class="ml-2 btn btn-grey">Save</button>
+              </div>
+            </div>
+          </div>
+          <!-- Post secundario 2 -->
+          <div class="post w-1bg-white rounded mt-2 bg-white">
+            <!--Imagen principal-->
+            <div class="d-flex mt-3">
+              <!--Imagen de perfil-->
+              <img
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s--CdnRX_G1--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/587369/16a5958f-8f4a-4341-ab1f-0c6cecddb2c4.jpeg"
+                alt=""
+                class="rounded-circle profile-p ml-3"
+              />
+              <div class="author-info ml-2">
+                <p>Florence O.</p>
+                <p>Mar 8 (21 mins)</p>
+              </div>
+            </div>
+            <a href="#">
+              <h1 class="ml-3">
+                Nevertheless, Florence Coded Because Nothing Can Stop Her!
+              </h1>
+            </a>
+            <ul class="h-post d-flex w-100 flex-wrap">
+              <li><a href="#">#shecode</a></li>
+              <li><a href="#">#womenintech</a></li>
+              <li><a href="#">#shecodedally</a></li>
+              <li><a href="#">#choosetochallenge</a></li>
+            </ul>
+            <div
+              class="post-interactions d-flex justify-content-between align-items-center"
+            >
+              <div class="interactions d-flex">
+                <div>
+                  <img src="Images/heart2.svg" alt="like" />
+                  <span>26</span>
+                  <span class="d-none d-md-inline">reactions</span>
+                </div>
+                <div>
+                  <img src="Images/comments.svg" alt="comment" class="ml" />
+                  <span>10</span>
+                  <span class="d-none d-md-inline">comments</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <p class="mb-0">7 min read</p>
+                <button class="ml-2 btn btn-grey">Save</button>
+              </div>
+            </div>
+          </div>
+          <!-- Post secundario 3 -->
+          <div class="post w-1bg-white rounded mt-2 bg-white">
+            <!--Imagen principal-->
+            <div class="d-flex mt-3">
+              <!--Imagen de perfil-->
+              <img
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s--A8JG5rF3--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/401660/a9ee09fc-8cd2-4c80-b906-bdcabf558e51.jpg"
+                alt=""
+                class="rounded-circle profile-p ml-3"
+              />
+              <div class="author-info ml-2">
+                <p>M. Bagher Abiat</p>
+                <p>Mar 6 (2 hours ago)</p>
+              </div>
+            </div>
+            <a href="#">
+              <h1 class="ml-3">Big useEffect mistake</h1>
+            </a>
+            <ul class="h-post d-flex w-100 flex-wrap">
+              <li><a href="#">#react</a></li>
+              <li><a href="#">#webdev</a></li>
+              <li><a href="#">#javascript</a></li>
+              <li><a href="#">#performance</a></li>
+            </ul>
+            <div
+              class="post-interactions d-flex justify-content-between align-items-center"
+            >
+              <!--footer del post principal-->
+              <div class="interactions d-flex">
+                <div>
+                  <img src="Images/heart2.svg" alt="like" />
+                  <span>50</span>
+                  <span class="d-none d-md-inline">reactions</span>
+                </div>
+                <div>
+                  <img src="Images/comments.svg" alt="comment" class="ml" />
+                  <span>9</span>
+                  <span class="d-none d-md-inline">comments</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <p class="mb-0">7 min read</p>
+                <button class="ml-2 btn btn-grey">Save</button>
+              </div>
+            </div>
+          </div>
+          <!-- Post secundario 4 -->
+          <div class="post w-1bg-white rounded mt-2 bg-white">
+            <!--Imagen principal-->
+            <div class="d-flex mt-3">
+              <!--Imagen de perfil-->
+              <img
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s--NCf7UDz2--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/413463/6c63231b-8b51-4157-9ffc-5f675259da7f.png"
+                alt=""
+                class="rounded-circle profile-p ml-3"
+              />
+              <div class="author-info ml-2">
+                <p>Colin Chartier</p>
+                <p>Mar 6 (2 hours ago)</p>
+              </div>
+            </div>
+            <a href="#">
+              <h1 class="ml-3">
+                Taking your JS Skills to the Next Level { with The Most Powerful
+                JS_Tutorial }
+              </h1>
+            </a>
+            <ul class="h-post d-flex w-100 flex-wrap">
+              <li><a href="#">#learning</a></li>
+              <li><a href="#">#javascript</a></li>
+              <li><a href="#">#tutorial</a></li>
+            </ul>
+            <div
+              class="post-interactions d-flex justify-content-between align-items-center"
+            >
+              <!--footer del post principal-->
+              <div class="interactions d-flex">
+                <div>
+                  <img src="Images/heart2.svg" alt="like" />
+                  <span>31</span>
+                  <span class="d-none d-md-inline">reactions</span>
+                </div>
+                <div>
+                  <img src="Images/comments.svg" alt="comment" class="ml" />
+                  <span>9</span>
+                  <span class="d-none d-md-inline">comments</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <p class="mb-0">6 min read</p>
+                <button class="ml-2 btn btn-grey">Save</button>
+              </div>
+            </div>
+          </div>
+          <!-- Post secundario 5 -->
+          <div class="post w-1bg-white rounded mt-2 bg-white">
+            <!--Imagen principal-->
+            <div class="d-flex mt-3">
+              <!--Imagen de perfil-->
+              <img
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s--Kcu5py0m--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/294302/b8052502-9903-46e2-a6f3-ba477c85de69.jpg"
+                alt=""
+                class="rounded-circle profile-p ml-3"
+              />
+              <div class="author-info ml-2">
+                <p>Animesh Pandey</p>
+                <p>Mar 5 (1 day ago)</p>
+              </div>
+            </div>
+            <a href="#">
+              <h1 class="ml-3">Solution: Design HashMap (ver. 1)</h1>
+            </a>
+            <ul class="h-post d-flex w-100 flex-wrap">
+              <li><a href="#">#algorithms</a></li>
+              <li><a href="#">#javascript</a></li>
+              <li><a href="#">#java</a></li>
+              <li><a href="#">#python</a></li>
+            </ul>
+            <div
+              class="post-interactions d-flex justify-content-between align-items-center"
+            >
+              <!--footer del post principal-->
+              <div class="interactions d-flex">
+                <div>
+                  <img src="Images/heart2.svg" alt="like" />
+                  <span>6</span>
+                  <span class="d-none d-md-inline">reactions</span>
+                </div>
+                <div>
+                  <img src="Images/comments.svg" alt="comment" class="ml" />
+                  <span>2</span>
+                  <span class="d-none d-md-inline">comments</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <p class="mb-0">6 min read</p>
+                <button class="ml-2 btn btn-grey">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <!--ASIDE RIGHT-->
-
-        <aside class="right-aside">
+        <div class="col-lg-3 d-lg-block d-none p-0">
+          <aside class="right-aside">
             <!-- primer card -->
-            <div class="aside-card">
-                <img src="Images/img-aside-card.png" alt="card-img">
+            <div class="aside-card bg-light my-2 border rounded">
+              <img
+                class="w-100"
+                src="Images/img-aside-card.png"
+                alt="card-img"
+              />
 
-                <header class="left-header">
-                    <h3>Stories (41)</h3>
-                </header>
+              <header class="py-3 border-bottom">
+                <a href="#">
+                  <h3>Stories (41)</h3>
+                </a>
+              </header>
 
-                <a href="#">
-                    <div>
-                        SheCoded 2021 — Stories From Women Building Software and the Allies Supporting Them
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        Nevertheless, Gift Coded
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        She Coded, 2021
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        Nevertheless, Minja coded
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="db">
-                        Nevertheless, she coded: Arisa Fukuzaki
-                    </div>
-                </a>
-
-                <div class="aside-buttons">
-                    <span>Share Your Story</span>
-                    <span>See all posts</span>
+              <a href="#">
+                <div class="py-3 border-bottom">
+                  SheCoded 2021 — Stories From Women Building Software and the
+                  Allies Supporting Them
                 </div>
+              </a>
+              <a href="#">
+                <div class="py-3 border-bottom">Nevertheless, Gift Coded</div>
+              </a>
+              <a href="#">
+                <div class="py-3 border-bottom">She Coded, 2021</div>
+              </a>
+              <a href="#">
+                <div class="py-3 border-bottom">Nevertheless, Minja coded</div>
+              </a>
+              <a href="#">
+                <div class="py-3">Nevertheless, she coded: Arisa Fukuzaki</div>
+              </a>
 
+              <div class="py-4 d-flex flex-column">
+                <button class="btn btn-blue mb-3 mx-auto w-75">
+                  Share your story
+                </button>
+                <button class="btn btn-grey mx-auto w-75">See all posts</button>
+              </div>
             </div>
-
-
             <!-- segunda card -->
-            <div class="aside-card">
+            <div class="aside-card bg-white my-2 border rounded">
+              <header
+                class="py-3 px-2 border-bottom d-flex justify-content-between"
+              >
+                <h3>Listings</h3>
 
+                <a class="text-blue" href="">See all</a>
+              </header>
 
-                <header class="left-header">
-                    <h3>Listings</h3>
+              <a href="#">
+                <div class="py-2 border-bottom">
+                  DEV gear you need
+                  <p class="text-secondary">forsale</p>
+                </div>
+              </a>
+              <a href="#">
+                <div class="py-2 border-bottom">
+                  Financial advisor for devs
 
-                    <a href="">See all</a>
+                  <p class="text-secondary">misc</p>
+                </div>
+              </a>
+              <a href="#">
+                <div class="py-2 border-bottom">
+                  The Podcast is LIVE!
 
-                </header>
-
-                <a href="#">
-                    <div>
-                        DEV gear you need
-                        <p>forsale</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        Financial advisor for devs
-
-                        <p>misc</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        The Podcast is LIVE!
-
-                        <p>education</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        Technical Women in the Microsoft Community Panel
-                        <p>events</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="db">
-                        Swimm 🤿
-                        <p>products</p>
-                    </div>
-                </a>
-
+                  <p class="text-secondary">education</p>
+                </div>
+              </a>
+              <a href="#">
+                <div class="py-2 border-bottom">
+                  Technical Women in the Microsoft Community Panel
+                  <p class="text-secondary">events</p>
+                </div>
+              </a>
+              <a href="#">
+                <div class="py-2">
+                  Swimm 🤿
+                  <p class="text-secondary">products</p>
+                </div>
+              </a>
             </div>
-
-
             <!-- tercera card -->
-            <div class="aside-card">
+            <div class="aside-card bg-white my-2 border rounded">
+              <header class="py-3 border-bottom pl-2">
+                <h3>#help</h3>
+              </header>
 
-
-                <header class="left-header">
-                    <h3>#help</h3>
-
-
-
-                </header>
-
-                <a href="#">
-                    <div>
-                        How to Test Services When You Have the Keys to the Castle
-                        <p>1 comment</p>
-                    </div>
-                </a>
-
+              <a href="#">
+                <div class="py-3">
+                  How to Test Services When You Have the Keys to the Castle
+                  <p class="text-secondary">1 comment</p>
+                </div>
+              </a>
             </div>
+            <!-- cuarta card -->
+            <div class="aside-card bg-white my-2 border rounded">
+              <header class="py-3 pl-2 border-bottom">
+                <h3>#Discuss</h3>
+              </header>
 
-            <!-- tercera card -->
-            <div class="aside-card">
-
-
-                <header class="left-header">
-                    <h3>#Discuss</h3>
-
-
-                </header>
-
-                <a href="#">
-                    <div>
-                        "Glassdoor" but for Remote!
-                        <p>3 comments</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        "use database_name" with PostgreSQL
-
-                        <p>4 comments</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        What exactly is VanillaJS?
-                        <p>19 comments</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        Let's Re-acronym KISSb <br>
-
-                        <p>New</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div>
-                        What are 3 on-tech books that have made you a better developer (and person)?
-                        <br>
-                        <p>New</p>
-                    </div>
-                </a>
-
+              <a href="#">
+                <div class="py-2 border-bottom">
+                  "Glassdoor" but for Remote!
+                  <p class="text-secondary">3 comments</p>
+                </div>
+              </a>
+              <a href="#">
+                <div class="py-2 border-bottom">
+                  "use database_name" with PostgreSQL
+                  <p class="text-secondary">4 comments</p>
+                </div>
+              </a>
+              <a href="#">
+                <div class="py-2 border-bottom">
+                  What exactly is VanillaJS?
+                  <p class="text-secondary">19 comments</p>
+                </div>
+              </a>
+              <a href="#">
+                <div class="py-2 border-bottom">
+                  Let's Re-acronym KISSb <br />
+                  <span class="bg-blue text-white p-1 rounded">New</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="py-2">
+                  What are 3 on-tech books that have made you a better developer
+                  (and person)?
+                  <br />
+                  <span class="bg-blue text-white p-1 rounded">New</span>
+                </div>
+              </a>
             </div>
-
-        </aside>
-
-
+          </aside>
+        </div>
+      </div>
     </div>
 
-
-
-    <!--Footer-->
-    <footer>
-        <div class="footer-wrapper">
-            <div class="list-links">
-                <!--Etiquetas con Flex wrap y space between-->
-                <a href="#">Home</a>
-                <a href="#">Reading List</a>
-                <a href="#">Listings</a>
-                <a href="#">Podcasts</a>
-                <a href="#">Videos</a>
-                <a href="#">Tags</a>
-                <a href="#">Code of Conduct</a>
-                <a href="#">FAQ</a>
-                <a href="#">DEV Shop</a>
-                <a href="#">Sponsors</a>
-                <a href="#">About</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of use</a>
-                <a href="#">Contact</a>
-                <a href="#"><b>Write a post</b></a>
-                <div class="icons-group">
-                    <!--Iconos centrados JC+AI-->
-                    <p class="icon fab fa-twitter"></p>
-                    <p class="icon fab fab fa-facebook-square"></p>
-                    <p class="icon fab fa-github"></p>
-                    <p class="icon fab fa-instagram"></p>
-                    <p class="icon fab fa-twitch"></p>
-                </div>
-                <div class="separator"></div>
-            </div>
-            <div class="text-wrapper">
-                <!--Texto-->
-                <p><a href="#">DEV Community</a> – A constructive and inclusive social network for software developers.
-                    With
-                    you every step of your journey.</p>
-                <p>Built on <a href="">Forem</a> — the open source software that powers <a href="#">DEV</a> and other
-                    inclusive communities.</p>
-                <p>Made with love and <a href="#">Ruby on Rails</a>. DEV Community &copy; 2016 - 2021.</p>
-            </div>
-            <div class="logo-wrapper">
-                <!--Logo-->
-                <img src="Images/logo-footer.svg" alt="logo-footer">
-            </div>
+    <!-- Footer -->
+    <footer
+      class="container-fluid bg-footer-primary border-bottom position-relative"
+    >
+      <div
+        class="row p-3 px-md-5 align-items-center position-relative row-lg-wrapper mx-lg-auto"
+      >
+        <!--links-col -->
+        <div class="col-12 d-flex justify-content-center flex-wrap px-2 my-3">
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >Reading List</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >Listings</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >Podcasts</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >Videos</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >Tags</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >Code of Conduct</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >FAQ</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >DEV Shop</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >Sponsors</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >About</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >Privacy Policy</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >Terms of use</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
+            ><b>Write a post</b></a
+          >
         </div>
-        <img src="Images/perezoso.png" alt="perezoso-img" class="perezoso-img">
+        <!--icons-col -->
+        <div class="col-12 d-flex justify-content-center flex-wrap px-2 my-3">
+          <a
+            href="#"
+            class="icon-footer text-decoration-none icon fab fa-twitter mr-3"
+          ></a>
+          <a
+            href="#"
+            class="icon-footer text-decoration-none icon fab fab fa-facebook-square mr-3"
+          ></a>
+          <a
+            href="#"
+            class="icon-footer text-decoration-none icon fab fa-github mr-3"
+          ></a>
+          <a
+            href="#"
+            class="icon-footer text-decoration-none icon fab fa-instagram mr-3"
+          ></a>
+          <a
+            href="#"
+            class="icon-footer text-decoration-none icon fab fa-twitch mr-3"
+          ></a>
+        </div>
+        <!--separator-col -->
+        <div class="col-1 separator mx-auto"></div>
+        <!--paragraph-col -->
+        <div
+          class="col-12 d-flex justify-content-center flex-wrap px-2 mt-2 text-center"
+        >
+          <p class="text-footer-size-p text-footer-color-p mb-1">
+            <a
+              href="#"
+              class="text-footer-color-link font-weight-bold text-decoration-none"
+              >DEV Community</a
+            >
+            – A constructive and inclusive social network for software
+            developers. With you every step of your journey.
+          </p>
+          <p class="text-footer-size-p text-footer-color-p mb-0">
+            Built on
+            <a
+              href="#"
+              class="text-footer-color-link font-weight-bold text-decoration-none"
+              >Forem</a
+            >
+            — the open source software that powers
+            <a
+              href="#"
+              class="text-footer-color-link font-weight-bold text-decoration-none"
+              >DEV</a
+            >
+            and other inclusive communities.
+          </p>
+          <p class="text-footer-size-p text-footer-color-p">
+            Made with love and
+            <a
+              href="#"
+              class="text-footer-color-link font-weight-bold text-decoration-none"
+              >Ruby on Rails</a
+            >. DEV Community &copy; 2016 - 2021.
+          </p>
+        </div>
+        <div class="col-1 mx-auto">
+          <img src="./Images/logo-footer.svg" alt="logo-footer" />
+        </div>
+      </div>
+      <img
+        src="./Images/img-footer/perezoso.png"
+        alt="perezoso"
+        class="d-none d-lg-inline position-absolute img-footer-move"
+      />
     </footer>
 
-
-
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

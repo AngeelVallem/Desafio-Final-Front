@@ -1,0 +1,73 @@
+@import url('//fonts.googleapis.com/css?family=Work+Sans:400,700');
+@import url('//fonts.googleapis.com/css?family=Droid+Sans:700');
+
+.bor {
+    border-bottom: 2px solid lightgray;
+}
+
+.left-wrpr {
+    width: 60vw;
+
+    input {
+        width: 430px;
+        border: 1px solid #b5bdc4;
+        background-color: rgba(225, 237, 252, .2);
+
+        &:focus {
+            background-color: white;
+            border-color: blue;
+            box-shadow: 1px 1px blue;
+            outline: none;
+        }
+
+    }
+
+    .h35i {
+        width: 25px;
+    }
+
+    .h70i {
+        width: 50px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.right-wrpr {
+    width: 40vw;
+
+    img {
+        width: 1.5rem;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 2px 8px rgb(240, 240, 240);
+            border-radius: 50%;
+            background-color: rgb(240, 240, 240);
+        }
+    }
+
+    button>img {
+        width: 38px;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 2px 5px rgb(240, 240, 240);
+            background-color: rgb(240, 240, 240);
+        }
+    }
+
+    .bttn {
+        background-color: #3b49df;
+        height: 40px;
+        width: 120px;
+        font-weight: 500;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #323ebe;
+        }
+    }
+}
