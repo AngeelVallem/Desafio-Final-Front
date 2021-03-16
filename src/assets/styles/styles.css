@@ -515,6 +515,10 @@ textarea {
   background-color: #323ebe;
 }
 
+.bg-secundary {
+  background-color: #f9fafa;
+}
+
 .btn-grey {
   color: #363d44 !important;
   background-color: #d2d6db !important;

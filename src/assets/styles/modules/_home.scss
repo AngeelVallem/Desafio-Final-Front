@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+
 #homee{
     background-color: #eef0f1;
 }
@@ -59,6 +60,9 @@
 
     &blue{
         background-color: $blue;
+    }
+    &secundary{
+        background-color: #f9fafa;
     }
 }
 
