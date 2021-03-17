@@ -165,9 +165,12 @@ textarea {
 /*Queries*/
 @media only screen and (min-width: 768px) {
   .fixed-pos {
+    left: 10px;
+  }
+  .fixed-pos {
     background-color: transparent;
     border-top: none;
-    top: 0;
+    top: 52px;
     width: 20%;
     z-index: 0;
   }
@@ -184,6 +187,9 @@ textarea {
 }
 
 @media only screen and (min-width: 1025px) {
+  .fixed-pos {
+    left: 70px;
+  }
   .icon- {
     &nav {
       height: 24px;
@@ -220,5 +226,17 @@ textarea {
     &:hover{
       background-color: #8e96e7;
     }
+  }
+}
+
+@media only screen and (min-width: 1600px){
+  .fixed-pos {
+    left: 250px;
+  }
+}
+
+@media only screen and (min-width: 1700px){
+  .fixed-pos{
+      left: 190px
   }
 }
