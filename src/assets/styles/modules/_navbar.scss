@@ -1,76 +1,109 @@
-@import url('//fonts.googleapis.com/css?family=Work+Sans:400,700');
-@import url('//fonts.googleapis.com/css?family=Droid+Sans:700');
-#homenvb{
-    background-color: white;
+@import url("//fonts.googleapis.com/css?family=Work+Sans:400,700");
+@import url("//fonts.googleapis.com/css?family=Droid+Sans:700");
+#homenvb {
+  background-color: white;
 }
 .bor {
-    border-bottom: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
 }
 
 .left-wrpr {
-    width: 60%;
+  width: 60%;
 
-    input {
-        width: 430px;
-        border: 1px solid #b5bdc4;
-        background-color: rgba(225, 237, 252, .2);
+  input {
+    width: 430px;
+    border: 1px solid #b5bdc4;
+    background-color: rgba(225, 237, 252, 0.2);
 
-        &:focus {
-            background-color: white;
-            border-color: blue;
-            box-shadow: 1px 1px blue;
-            outline: none;
-        }
-
+    &:focus {
+      background-color: white;
+      border-color: blue;
+      box-shadow: 1px 1px blue;
+      outline: none;
     }
+  }
 
-    .h35i {
-        width: 25px;
+  .h35i {
+    width: 25px;
+  }
+
+  .h70i {
+    width: 50px;
+
+    &:hover {
+      cursor: pointer;
     }
-
-    .h70i {
-        width: 50px;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
+  }
 }
 
 .right-wrpr {
-    width: 40%;
+  width: 40%;
 
-    img {
-        width: 1.5rem;
+  img {
+    width: 1.5rem;
 
-        &:hover {
-            cursor: pointer;
-            box-shadow: 0px 0px 2px 8px rgb(240, 240, 240);
-            border-radius: 50%;
-            background-color: rgb(240, 240, 240);
-        }
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 2px 8px rgb(240, 240, 240);
+      border-radius: 50%;
+      background-color: rgb(240, 240, 240);
     }
+  }
 
-    button>img {
-        width: 38px;
+  button > img {
+    width: 38px;
 
-        &:hover {
-            cursor: pointer;
-            box-shadow: 0px 0px 2px 5px rgb(240, 240, 240);
-            background-color: rgb(240, 240, 240);
-        }
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 2px 5px rgb(240, 240, 240);
+      background-color: rgb(240, 240, 240);
     }
+  }
 
-    .bttn {
-        background-color: #3b49df;
-        height: 40px;
-        width: 120px;
-        font-weight: 500;
+  .bttn {
+    background-color: #3b49df;
+    height: 40px;
+    width: 120px;
+    font-weight: 500;
 
-        &:hover {
-            cursor: pointer;
-            background-color: #323ebe;
-        }
+    &:hover {
+      cursor: pointer;
+      background-color: #323ebe;
     }
+  }
 }
 
+/*
+
+*/
+.collapse-1 {
+  background-color: white;
+  border: 1px solid black;
+  position: fixed;
+  z-index: 9999;
+  top: 5%;
+  left: -100%;
+  width: 70%;
+  transition: left 0.35s ease-in-out;
+  &.show {
+    left: 1.5%;
+  }
+}
+.collapse-2 {
+  background-color: white;
+  position: fixed;
+  z-index: 9999;
+  top: 7%;
+  right: -100%;
+  width: 70%;
+  transition: right 0.35s ease-in-out;
+  &.show {
+    right: 1.5%;
+  }
+}
+.collapsing {
+    position: unset !important;
+    transition: unset !important;
+    height: unset !important;
+    overflow: unset !important;
+  }

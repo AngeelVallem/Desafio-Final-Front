@@ -205,6 +205,48 @@
   background-color: #323ebe;
 }
 
+/*
+
+*/
+.collapse-1 {
+  background-color: white;
+  border: 1px solid black;
+  position: fixed;
+  z-index: 9999;
+  top: 5%;
+  left: -100%;
+  width: 70%;
+  -webkit-transition: left 0.35s ease-in-out;
+  transition: left 0.35s ease-in-out;
+}
+
+.collapse-1.show {
+  left: 1.5%;
+}
+
+.collapse-2 {
+  background-color: white;
+  position: fixed;
+  z-index: 9999;
+  top: 7%;
+  right: -100%;
+  width: 70%;
+  -webkit-transition: right 0.35s ease-in-out;
+  transition: right 0.35s ease-in-out;
+}
+
+.collapse-2.show {
+  right: 1.5%;
+}
+
+.collapsing {
+  position: unset !important;
+  -webkit-transition: unset !important;
+  transition: unset !important;
+  height: unset !important;
+  overflow: unset !important;
+}
+
 .fixed-pos {
   background-color: #eef0f1;
   bottom: 0;
