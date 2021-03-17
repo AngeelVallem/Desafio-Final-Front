@@ -239,6 +239,16 @@
   right: 1.5%;
 }
 
+.collapsing {
+  position: unset !important;
+  -webkit-transition: unset !important;
+  transition: unset !important;
+  height: unset !important;
+  overflow: unset !important;
+  top: unset !important;
+  transition: unset !important;
+}
+
 .fixed-pos {
   background-color: #eef0f1;
   bottom: 0;
