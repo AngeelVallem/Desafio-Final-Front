@@ -11,12 +11,11 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../assets/css/style-test.css" />
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
     <title>Footer-view</title>
   </head>
 
   <body>
-
     <footer
       class="container-fluid bg-footer-primary border-bottom position-relative"
     >
@@ -98,38 +97,80 @@
           <a
             href="#"
             class="text-decoration-none text-footer-color-link my-1 mx-2 p-1 f-size-link"
-            ><b>Write a post</b></a>
+            ><b>Write a post</b></a
+          >
         </div>
-        <div class="col-12 d-flex justify-content-center flex-wrap px-1 my-3">
-          <p class="icon fab fa-twitter mr-2"></p>
-          <p class="icon fab fab fa-facebook-square mr-2"></p>
-          <p class="icon fab fa-github mr-2"></p>
-          <p class="icon fab fa-instagram mr-2"></p>
-          <p class="icon fab fa-twitch mr-2"></p>
+        <!--icons-col -->
+        <div class="col-12 d-flex justify-content-center flex-wrap px-2 my-3">
+          <a
+            href="#"
+            class="icon-footer text-decoration-none icon fab fa-twitter mr-3"
+          ></a>
+          <a
+            href="#"
+            class="icon-footer text-decoration-none icon fab fab fa-facebook-square mr-3"
+          ></a>
+          <a
+            href="#"
+            class="icon-footer text-decoration-none icon fab fa-github mr-3"
+          ></a>
+          <a
+            href="#"
+            class="icon-footer text-decoration-none icon fab fa-instagram mr-3"
+          ></a>
+          <a
+            href="#"
+            class="icon-footer text-decoration-none icon fab fa-twitch mr-3"
+          ></a>
         </div>
+        <!--separator-col -->
+        <div class="col-1 separator mx-auto"></div>
+        <!--paragraph-col -->
         <div
-          class="col-12 d-flex justify-content-center flex-wrap px-1 my-3 text-center"
+          class="col-12 d-flex justify-content-center flex-wrap px-2 mt-2 text-center"
         >
-          <p>
-            <a href="#">DEV Community</a>
+          <p class="text-footer-size-p text-footer-color-p mb-1">
+            <a
+              href="#"
+              class="text-footer-color-link font-weight-bold text-decoration-none"
+              >DEV Community</a
+            >
             – A constructive and inclusive social network for software
             developers. With you every step of your journey.
           </p>
-          <p>
+          <p class="text-footer-size-p text-footer-color-p mb-0">
             Built on
-            <a href="">Forem</a>
+            <a
+              href="#"
+              class="text-footer-color-link font-weight-bold text-decoration-none"
+              >Forem</a
+            >
             — the open source software that powers
-            <a href="#">DEV</a>
+            <a
+              href="#"
+              class="text-footer-color-link font-weight-bold text-decoration-none"
+              >DEV</a
+            >
             and other inclusive communities.
           </p>
-          <p>
-            Made with love and <a href="#">Ruby on Rails</a>. DEV Community
-            &copy; 2016 - 2021.
+          <p class="text-footer-size-p text-footer-color-p">
+            Made with love and
+            <a
+              href="#"
+              class="text-footer-color-link font-weight-bold text-decoration-none"
+              >Ruby on Rails</a
+            >. DEV Community &copy; 2016 - 2021.
           </p>
-          <img src="../Images/logo-footer.svg" alt="logo-footer">
+        </div>
+        <div class="col-1 mx-auto">
+          <img src="../Images/logo-footer.svg" alt="logo-footer" />
         </div>
       </div>
-
+      <img
+        src="../Images/img-footer/perezoso.png"
+        alt="perezoso"
+        class="d-none d-lg-inline position-absolute img-footer-move"
+      />
     </footer>
 
     <script
