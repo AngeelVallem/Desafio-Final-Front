@@ -208,6 +208,10 @@
 /*
 
 */
+.h-90 {
+  height: 90%;
+}
+
 .collapse-1 {
   background-color: white;
   border: 1px solid black;
@@ -246,6 +250,12 @@
   top: unset !important;
   -webkit-transition: unset !important;
   transition: unset !important;
+}
+
+@media only screen and (min-width: 767px) {
+  .collapse-2 {
+    width: 30%;
+  }
 }
 
 .fixed-pos {
