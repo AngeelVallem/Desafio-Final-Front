@@ -2,6 +2,6 @@
 ## Kodemia
 ---
 **Autores**
-* @DemianMtz1
+* @Tquito04
 * @angeelvallem
-* @towerstt
+* @rodrigojauregui
