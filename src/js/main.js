@@ -16,7 +16,9 @@ $('#avatar-img').attr("src",avatar)
 $('#user-name').text(name)
 $('#user-email').text(mail)
 })
- $('   ')
+ $('#create-post').click(() => {
+     window.location.replace("views/new-post.html")
+ })
 
 /*
 let postObjt = {
