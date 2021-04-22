@@ -41,3 +41,16 @@ const savePost = (variableObject) => {
         async: false
     })
 }
+
+$(() =>{
+    $(' form input[name="postTitle"] ').click(() => {
+        $('.asideContent').load('title-post.html')
+    })
+    $(' form input[name="postTags"] ').click(() => {
+        $('.asideContent').load('tags-post.html')
+    })
+    $(' form input[name="content"] ').click(() => {
+        $('.asideContent').load('content-post.html')
+    })
+})
+

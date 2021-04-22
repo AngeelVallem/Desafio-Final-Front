@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/font-awesome/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/src/assets/styles/styles.css">
-  
-    <title>Write a new post</title>
-</head>
-<body>
-    <!-- -- -- -- --Navbar-- -- -- -- -- -->
-    <nav class="navbar navbar-light ">
-        <div>        
-            <img src="/src/Images/logo copy.svg" alt="home">
-            <a class="navbar-brand">Write a new post</a>
-        </div>
-        <div >
-            <ul class="navbar-nav d-flex flex-row mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <button class="btn btn-outline-success" type="button">X</button>
-        </div>
-      </nav>
-      <!-- -- -- -- -- Container -- -- -- -- -- -->
-      <div class="container ">
-          <div class="row">
-             <div class="col-8">
 
-                <form class="d-flex flex-column my-5">
-                    <input type="text" name="coverUrl" placeholder="Add a cover image">
-                    <input type="text" name="postTitle"  placeholder="New post title here...">
-                    <input type="text" name="postTags"  placeholder="Add upt to 4 tags">
-                    <input type="text" name="imagesUrl" placeholder="Upload image">
-                    <input type="text" name="content"  placeholder="Write your post content here...">
-                </form>
-                <!-- footer -->
-                <div>
-                    <button class="btn btn-primary" type="button" id="publish" class="btn btn-outline-dark">Publish</button>
-                    <button class="btn btn-secondary" type="button" id="saveDraft" class="btn btn-outline-dark">Save Draft</button>
-                    <button class="btn btn-outline-success" type="button">X</button>
-                    <a href="">Revert new changes</a>
-                </div>
-                
-             </div>
-             <!-- aside -->
-             <div class="col-4">
-                <h3>
-                    Writing a Great Post Title
-                </h3>
-                <p>
-                    Think of your post title as a super short (but compelling!) description — like an overview of the actual post in one short sentence.
-                    Use keywords where appropriate to help ensure people can find your post by search.
-                </p>
-             </div>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/font-awesome/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/assets/styles/styles.css">
+
+  <title>Write a new post</title>
+</head>
+
+<body>
+  <!-- -- -- -- --Navbar-- -- -- -- -- -->
+  <nav class="navbar navbar-light ">
+    <div>
+      <img src="/Images/post/Tdev.svg" alt="home">
+      <a class="navbar-brand">Write a new post</a>
+    </div>
+    <div>
+      <ul class="navbar-nav d-flex flex-row mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <a href="">
+        <img src="/Images/post/Tx.svg" alt="">
+      </a>
+    </div>
+  </nav>
+  <!-- -- -- -- -- Container -- -- -- -- -- -->
+  <div class="container ">
+    <div class="row">
+      <div class="col-8 cardPostInput p-0 rounded-lg">
+        <form class="d-flex flex-column  formPost">
+          <input class="rounded-lg shadow-sm" type="text" name="coverUrl" placeholder="Add a cover image">
+          <input type="text" name="postTitle" placeholder="New post title here...">
+          <input type="text" name="postTags" placeholder="Add upt to 4 tags...">
+          <input type="text" name="imagesUrl" placeholder="       Upload image">
+          <input type="text" name="content" placeholder="Write your post content here...">
+        </form>
+        <!-- footer -->
+
+
+      </div>
+      <div class="col-4 asideContent">
 
       </div>
 
+    </div>
+    <!-- aside -->
 
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <div clas="row">
+      <div class="col-12">
+        <button class="btn btn-primary" type="button" id="publish" class="btn btn-outline-dark">Publish</button>
+        <button class="btn btn-secondary" type="button" id="saveDraft" class="btn btn-outline-dark">Save Draft</button>
+        <button class="btn btn-outline-success" type="button">X</button>
+        <a href="">Revert new changes</a>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
-  </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
   <script src="/js/createpost.js"></script>
 
 </body>
+
 </html>

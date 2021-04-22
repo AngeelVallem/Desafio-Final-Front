@@ -1,0 +1,94 @@
+
+$grayText: #64707d;
+
+body{
+    background-color: #eef0f1;
+
+}
+
+.cardPostInput{
+    background-color: white;
+    border: solid 1px rgba(#000, .2);
+    height: 70vh;
+}
+
+.formPost input[name="coverUrl"]
+{   width:fit-content;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: solid 3px rgba(#000, .2);
+    padding: .5rem ;
+    margin: 2rem 4rem;
+}
+.formPost input[name="coverUrl"]:focus{
+    background-color: #eef0f1;
+    border: solid 3px rgba(#000, .4);
+    
+}
+
+.formPost input[name="coverUrl"]::placeholder {
+       color: $grayText;
+}
+.formPost input[name="coverUrl"]:focus::placeholder{
+    color: black;
+}
+
+
+.formPost input[name="postTitle"]
+{   
+    border: none;
+    font-size: 3.7rem;
+    font-weight: 800;
+    margin: 2rem 4rem;
+}
+:focus{
+    outline: none;
+}
+.formPost input[name="postTitle"]::placeholder {
+    color: $grayText;
+}
+
+.formPost input[name="postTags"]
+{   
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 450;
+    font-family: 'Roboto Mono', monospace;
+    margin: 2rem 4rem;
+}
+:focus{
+    outline: none;
+}
+
+.formPost input[name="imagesUrl"]
+{   
+    background-image: url(/Images/post/Timgsvg.svg);
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position-x: 4rem;
+    background-position-y: 1rem;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    background-color: #f9fafa;
+    padding: 1rem 4rem;
+}
+:focus{
+    outline: none;
+}
+.formPost input[name="imagesUrl"]::placeholder {
+    color: #54514b;
+}
+
+.formPost input[name="content"]
+{   
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 450;
+    font-family: 'Roboto Mono', monospace;
+    margin: 2rem 4rem;
+}
+:focus{
+    outline: none;
+}
