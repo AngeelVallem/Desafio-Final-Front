@@ -25,10 +25,10 @@
     <div>
       <ul class="navbar-nav d-flex flex-row mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" id="homePostEdit" href="#">Edit <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" id="homePostPreview" href="#">Preview</a>
         </li>
       </ul>
     </div>
@@ -42,13 +42,7 @@
   <div class="container ">
     <div class="row">
       <div class="col-8 cardPostInput p-0 rounded-lg">
-        <form class="d-flex flex-column  formPost">
-          <input class="rounded-lg shadow-sm" type="text" name="coverUrl" placeholder="Add a cover image">
-          <input type="text" name="postTitle" placeholder="New post title here...">
-          <input type="text" name="postTags" placeholder="Add upt to 4 tags...">
-          <input type="text" name="imagesUrl" placeholder="       Upload image">
-          <input type="text" name="content" placeholder="Write your post content here...">
-        </form>
+
         
       </div>
       <!-- aside -->
@@ -79,7 +73,7 @@
     </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
-  <script src="/src/js/createpost.js"></script>
+  <script src="/js/createpost.js"></script>
 
 </body>
 

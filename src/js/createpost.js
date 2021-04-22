@@ -1,4 +1,5 @@
 
+//modal
 let User = {
     name : 'Isarel',
     mail : 'israel@kodemia.com',
@@ -42,15 +43,49 @@ const savePost = (variableObject) => {
     })
 }
 
-$(() =>{
-    $(' form input[name="postTitle"] ').click(() => {
-        $('.asideContent').load('title-post.html')
+let postData = {};
+let postEdit = function () {
+    $(' form input[type="text"] ').each(function(){
+        //console.log(this)
+        postData[this.name] = this.value;   
+    }) 
+    //console.log(postData)
+}
+
+$(() => {
+
+    $('.cardPostInput').load('editPost.html', ()=>{
+
+        $(' form input[name="postTitle"] ').click(() => {
+            $('.asideContent').load('title-post.html')
+        })
+        $(' form input[name="postTags"] ').click(() => {
+            $('.asideContent').load('tags-post.html')
+        })
+        $(' form input[name="content"] ').click(() => {
+            $('.asideContent').load('content-post.html')
+        })
+    }) 
+
+    $('#homePostEdit').click( ( )    => {
+        $('.cardPostInput').load('editPost.html', ()=>{
+    
+            $(' form input[name="postTitle"] ').click(() => {
+                $('.asideContent').load('title-post.html')
+            })
+            $(' form input[name="postTags"] ').click(() => {
+                $('.asideContent').load('tags-post.html')
+            })
+            $(' form input[name="content"] ').click(() => {
+                $('.asideContent').load('content-post.html')
+            })
+        })  
     })
-    $(' form input[name="postTags"] ').click(() => {
-        $('.asideContent').load('tags-post.html')
-    })
-    $(' form input[name="content"] ').click(() => {
-        $('.asideContent').load('content-post.html')
+    $('#homePostPreview').click(() =>{
+        postEdit();
+        $('.cardPostInput').load('previewPost.html')
+ 
     })
 })
+
 
