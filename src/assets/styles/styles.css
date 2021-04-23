@@ -813,7 +813,7 @@ body {
   }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 768px) {
   .navbarPost {
     width: 100%;
     margin: 0;
@@ -832,7 +832,7 @@ body {
     width: 90vw;
   }
   .cardPostInput {
-    height: 79vh;
+    height: 70vh;
   }
   .formPost input[name="coverUrl"] {
     margin: 0 2px 10px 2px;
