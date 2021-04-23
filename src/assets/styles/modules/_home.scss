@@ -295,6 +295,11 @@ header {
     
     .aside-card{
 
+        #aside-image{
+            height: 130px;
+            object-fit: cover;
+        }
+
         .text-link{
             cursor: pointer !important;
 
@@ -338,6 +343,11 @@ header {
 @media (min-width: 768px) { 
 
     .post{
+
+        .cover-img{
+            height: 200px;
+            object-fit: cover;
+        }
         
         .post-interactions{
 
