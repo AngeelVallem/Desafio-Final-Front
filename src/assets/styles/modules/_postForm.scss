@@ -6,6 +6,12 @@ body{
 
 }
 
+.link-home{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 .cardPostInput{
     background-color: white;
     border: solid 1px rgba(#000, .2);

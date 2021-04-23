@@ -1,7 +1,7 @@
 
 //modal
 let User = {
-    name : 'Isarel',
+    name : 'Irael Salinas',
     mail : 'israel@kodemia.com',
     idUser : 1,
     avatar : 'https://avatars.githubusercontent.com/u/6852277?v=4' 
@@ -9,10 +9,14 @@ let User = {
 let {name,avatar,mail} = User;
 
 let setPost = function(){
+
+
     let post = {
+        month : moment().format('MMMM'),
+        year : moment().format('YYYY'),
+        likes : 0, 
         idPost: Date.now(),
         date: moment().format('MMM DD') ,
-        time: moment().startOf("MMM DDD").fromNow(),
         author: name,
         avatar,
     };
@@ -26,6 +30,7 @@ let setPost = function(){
         //console.log(this)
         this.value = '';
     })
+    window.location.replace("../index.html")
 }
 
 $('#publish').click(setPost);
@@ -93,5 +98,8 @@ $(() => {
 })
 let tags;
 let hashtFuction;
+
+
+
 
 
