@@ -16,15 +16,15 @@
   <title>Write a new post</title>
 </head>
 
-<body class="p-sm-2">
+<body>
   <!-- -- -- -- --Navbar-- -- -- -- -- -->
-  <nav class="navbar navbar-light navbarPost ">
+  <nav class="navbar d-flex navbar-light navbarPost ">
     <div>
       <a href="/index.html"><img class="link-home mr-3 d-none d-md-inline-block" src="/Images/post/Tdev.svg" alt="home"></a>
       <h2 class="navbar-brand d-none d-md-inline-block">Write a new post</h2>
     </div>
     <div>
-      <ul class="navbar-nav d-flex flex-row mr-auto">
+      <ul class="navbar-nav  d-flex flex-row ">
         <li class="nav-item active">
           <a class="nav-link" id="homePostEdit" href="#">Edit <span class="sr-only"></span></a>
         </li>
@@ -33,16 +33,16 @@
         </li>
       </ul>
     </div>
-    <div>
+    <div class="m-0">
       <button type="button" class="btn " data-toggle="modal" data-target="#exampleModal">
         <img src="/Images/post/Tx.svg" alt="">
       </button>
     </div>
   </nav>
   <!-- -- -- -- -- Container -- -- -- -- -- -->
-  <div class="container-fluid container-lg  ">
+  <div class="container-fluid containerPostWrite p-0 container-lg  ">
     <div class="row ">
-      <div class="col-12 col-md-8 cardPostInput p-0 rounded-lg">
+      <div class="col-12 p-0 col-md-8 cardPostInput m-0 rounded-lg">
 
       </div>
       <!-- aside -->
@@ -54,11 +54,11 @@
 
     <!-- footer -->
     <div clas="row">
-      <div class="col-12 mt-3">
-        <button class="btn btn-primary" type="button" id="publish" class="btn btn-outline-dark">Publish</button>
-        <button class="btn btn-secondary" type="button" id="saveDraft" class="btn btn-outline-dark">Save Draft</button>
+      <div class="col-12 footerPost">
+        <button class="btn btn-primary" type="button" id="publish" class="btn btn-outline-dark ">Publish</button>
+        <button class="btn btn-secondary" type="button" id="saveDraft" class="btn btn-outline-dark">Save  <a href="" class="d-none">draft</a></button>
         <button id="settingsBtn" class="btn btn-outline-success" type="button"></button>
-        <a href="">Revert new changes</a>
+        <a href="">Revert</a><a href="" class="d-none"> new changes</a>
       </div>
     </div>
 
