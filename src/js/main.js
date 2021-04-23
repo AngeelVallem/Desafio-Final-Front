@@ -217,7 +217,7 @@ const getPostByKey = (event) => {
 
   postClicked = { ...post, key };
 
-  $("#container-data").load("/src/views/Post.js");
+  $("#container-data").load("views/post.html");
 };
 
 $(".link-home").click(() => {
