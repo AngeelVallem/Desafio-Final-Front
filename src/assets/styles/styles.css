@@ -682,6 +682,21 @@ body {
   border: none;
 }
 
+#imgDivTitle {
+  width: 100%;
+  height: 326px;
+}
+
+#imgTitle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: magenta;
+}
+
 * {
   margin: 0;
   padding: 0;
