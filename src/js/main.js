@@ -29,8 +29,8 @@ $(() => {
     $(".nav .an").click((event) => {
       event.preventDefault();
       let view = event.target.dataset.viewTarget;
-      let url = `/views/${view}.html`;
-      $("nav .n").removeClass("active");
+      let url = `/src/views/${view}.html`;
+      $(".nav-item").removeClass("active");
       $(event.target).closest(".nav-item").addClass("active");
       loadView(url, view);
     });
@@ -217,7 +217,7 @@ const getPostByKey = (event) => {
 
   postClicked = { ...post, key };
 
-  $("#container-data").load("views/post.html");
+  $("#container-data").load("/src/views/Post.js");
 };
 
 $(".link-home").click(() => {
