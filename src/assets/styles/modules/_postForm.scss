@@ -12,15 +12,6 @@ body{
     }
 }
 
-.cardPostInput{
-    background-color: white;
-    border: solid 1px rgba(#000, .2);
-    height: 70vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    margin: 3rem 0;
-}
-
 .formPost input[name="coverUrl"]
 {   width:fit-content;
     text-align: center;
@@ -47,9 +38,9 @@ body{
 .formPost input[name="postTitle"]
 {   
     border: none;
-    font-size: 3.7rem;
-    font-weight: 800;
-    margin: 2rem 4rem;
+   // font-size: 3.7rem;
+    //font-weight: 800;
+    //margin: 2rem 4rem;
 }
 :focus{
     outline: none;
@@ -111,6 +102,15 @@ body{
     border: none;
 }
 
+.cardPostInput{
+    background-color: white;
+    border: solid 1px rgba(#000, .2);
+    height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 3rem 0;
+}
+
 .postBody{
     width: 100%;
 }
@@ -166,4 +166,11 @@ body{
     height: auto;
     margin: 3rem auto;
     word-wrap: break-word;
+}
+@media screen and (max-width: 376px) {
+    .formPost input[name="postTitle"]{
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0 .5rem;
+    }
 }

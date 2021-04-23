@@ -16,12 +16,12 @@
   <title>Write a new post</title>
 </head>
 
-<body>
+<body class="p-sm-2">
   <!-- -- -- -- --Navbar-- -- -- -- -- -->
-  <nav class="navbar navbar-light ">
+  <nav class="navbar navbar-light navbarPost ">
     <div>
-      <a href="/index.html"><img class="link-home mr-3 d-none d-lg-inline-block" src="/Images/post/Tdev.svg" alt="home"></a>
-      <h2 class="navbar-brand">Write a new post</h2>
+      <a href="/index.html"><img class="link-home mr-3 d-none d-md-inline-block" src="/Images/post/Tdev.svg" alt="home"></a>
+      <h2 class="navbar-brand d-none d-md-inline-block">Write a new post</h2>
     </div>
     <div>
       <ul class="navbar-nav d-flex flex-row mr-auto">
@@ -40,9 +40,9 @@
     </div>
   </nav>
   <!-- -- -- -- -- Container -- -- -- -- -- -->
-  <div class="container ">
-    <div class="row">
-      <div class="col-8 cardPostInput p-0 rounded-lg">
+  <div class="container-fluid container-lg  ">
+    <div class="row ">
+      <div class="col-12 col-md-8 cardPostInput p-0 rounded-lg">
 
       </div>
       <!-- aside -->
@@ -54,7 +54,7 @@
 
     <!-- footer -->
     <div clas="row">
-      <div class="col-12">
+      <div class="col-12 mt-3">
         <button class="btn btn-primary" type="button" id="publish" class="btn btn-outline-dark">Publish</button>
         <button class="btn btn-secondary" type="button" id="saveDraft" class="btn btn-outline-dark">Save Draft</button>
         <button id="settingsBtn" class="btn btn-outline-success" type="button"></button>
