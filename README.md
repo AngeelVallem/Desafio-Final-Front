@@ -2,6 +2,6 @@
 ## Kodemia
 ---
 **Autores**
-* @Tquito04
+* @Taquito04
 * @angeelvallem
 * @rodrigojauregui
