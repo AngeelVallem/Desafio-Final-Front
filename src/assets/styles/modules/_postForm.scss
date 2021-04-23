@@ -227,3 +227,66 @@ body{
         }
     } 
 }
+@media screen and (max-width: 376px) {
+
+    .navbarPost{
+        width: 100%;
+        margin: 0;
+        justify-content:flex-end;  
+        ul {
+            padding: 0;
+        }
+        
+        li{
+            font-size: 1rem;
+            margin:0 8px;
+        }
+    }
+    .containerPostWrite{
+        width:90vw;
+    }
+    .cardPostInput{
+        height: 79vh;
+    }
+    .formPost input[name="coverUrl"]{
+        margin: 0 2px 10px 2px;
+        font-size: 1rem;
+        width: 170px;
+        margin: .8rem .5rem;
+    }
+    .formPost input[name="coverUrl"]::placeholder {
+        color: black;
+        opacity: 85%;
+ }
+    .formPost input[name="postTitle"]{
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin: 0 .5rem;
+    }
+    .formPost input[name="postTags"]{
+        font-size: .9rem;
+        margin: 1rem .5rem;
+    }
+    .formPost input[name="imagesUrl"]{
+       padding: .7rem .5rem;
+       margin: .5rem 0rem;
+       font-size: 1rem;
+       background-size: 25px;
+       background-position-x: .5rem;
+       background-position-y: center;
+    }
+    .formPost input[name="content"]{
+        margin: .5rem .5rem;
+        font-size: 1rem;
+
+    }
+    .footerPost{
+        width: 99vw;
+        padding: .5rem 0;
+        a{
+            color: black;
+            font-size: .9rem;
+            opacity: 85%;
+        }
+    } 
+}
