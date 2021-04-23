@@ -446,6 +446,12 @@ textarea {
   background-color: #f9fafa;
 }
 
+.bg-card #img-header {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .bg-post-header {
   background-color: black;
 }
@@ -1084,6 +1090,12 @@ header .nav .nav-item .active:hover::after {
   overflow: hidden;
 }
 
+.right-aside .aside-card #aside-image {
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .right-aside .aside-card .text-link {
   cursor: pointer !important;
 }
@@ -1119,6 +1131,11 @@ header .nav .nav-item .active:hover::after {
 }
 
 @media (min-width: 768px) {
+  .post .cover-img {
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .post .post-interactions .interactions {
     width: 20rem;
   }
