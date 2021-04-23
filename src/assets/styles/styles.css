@@ -530,6 +530,10 @@ body {
   background-color: #eef0f1;
 }
 
+.link-home:hover {
+  cursor: pointer;
+}
+
 .cardPostInput {
   background-color: white;
   border: solid 1px rgba(0, 0, 0, 0.2);
@@ -800,6 +804,10 @@ header .nav .nav-item .active:hover::after {
   overflow: hidden;
 }
 
+.post .link:hover {
+  cursor: pointer;
+}
+
 .post a:hover {
   text-decoration: none;
 }
@@ -940,6 +948,15 @@ header .nav .nav-item .active:hover::after {
 
 .right-aside .aside-card {
   overflow: hidden;
+}
+
+.right-aside .aside-card .text-link {
+  cursor: pointer !important;
+}
+
+.right-aside .aside-card .text-link:hover {
+  background-color: #eef0f1;
+  color: #323ebe;
 }
 
 .right-aside .aside-card a {

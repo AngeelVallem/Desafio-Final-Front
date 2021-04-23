@@ -141,6 +141,13 @@ header {
 
     overflow: hidden;
 
+    .link{
+        
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
     a {
 
         &:hover {
@@ -287,6 +294,16 @@ header {
 .right-aside{
     
     .aside-card{
+
+        .text-link{
+            cursor: pointer !important;
+
+            &:hover{
+                    background-color: #eef0f1;
+                    color: $blue;
+            }
+        }
+
         overflow: hidden;
         a{
             color: #000;
