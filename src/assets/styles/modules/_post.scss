@@ -154,6 +154,12 @@ textarea {
 }
 .bg-card {
   background-color: $bg-post-secondary;
+
+  #img-header{
+    height: 300px;
+    object-fit: cover;
+  }
+
 }
 .bg-post-header {
   background-color: black;

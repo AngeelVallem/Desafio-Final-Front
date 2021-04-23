@@ -1,7 +1,7 @@
 
 //modal
 let User = {
-    name : 'Irael Salinas',
+    name : 'Israel Salinas',
     mail : 'israel@kodemia.com',
     idUser : 1,
     avatar : 'https://avatars.githubusercontent.com/u/6852277?v=4' 
@@ -12,10 +12,11 @@ let setPost = function(){
 
 
     let post = {
-        month : moment().format('MMMM'),
-        year : moment().format('YYYY'),
+        month : moment().format('MM'),
+        year : moment().format('YY'),
         likes : 0, 
         idPost: Date.now(),
+        day : moment().format('DD') ,
         date: moment().format('MMM DD') ,
         author: name,
         avatar,
@@ -75,7 +76,7 @@ $(() => {
         })
     }) 
 
-    $('#homePostEdit').click( ( )    => {
+    $('#homePostEdit').click( ( ) => {
         $('.cardPostInput').load('editPost.html', ()=>{
             $('.asideContent').removeClass("d-none")
             $(' form input[name="postTitle"] ').click(() => {
@@ -95,7 +96,13 @@ $(() => {
         $('.asideContent').addClass("d-none")
  
     })
+
+    $('#close-new').click(() => {
+        window.location.replace('../index.html')
+    })
+
 })
+
 let tags;
 let hashtFuction;
 
