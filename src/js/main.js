@@ -30,8 +30,8 @@ $(() => {
       event.preventDefault();
       let view = event.target.dataset.viewTarget;
       let url = `/src/views/${view}.html`;
-      $(".nav-item").removeClass("active");
-      $(event.target).closest(".nav-item").addClass("active");
+      $(".nav-link").removeClass("active");
+      $(event.target).closest(".nav-link").addClass("active");
       loadView(url, view);
     });
 
@@ -40,6 +40,7 @@ $(() => {
         switch (view) {
           case "week":
               printPost(getPostByWeek());
+              console.log(url);
             break;
 
           case "month":
