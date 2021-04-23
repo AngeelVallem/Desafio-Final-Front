@@ -1,7 +1,4 @@
 
-
-
-
 hashtFuction = function () {
         tags = postData.postTags.split(", ")
 }
@@ -14,5 +11,5 @@ tags.forEach(tag => {
     let tagList = `<li>#${tag}</li>`
     $('#hashtPost').append(tagList)
 })
-$('#imgContent').attr("src",postData.imagesUrl);
-$('#content').text(postData.content);
+$('#imgContentPreview').attr("src",postData.imagesUrl);
+$('#contentPreview').text(postData.content);

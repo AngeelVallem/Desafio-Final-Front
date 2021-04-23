@@ -16,6 +16,9 @@ body{
     background-color: white;
     border: solid 1px rgba(#000, .2);
     height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 3rem 0;
 }
 
 .formPost input[name="coverUrl"]
@@ -108,16 +111,59 @@ body{
     border: none;
 }
 
+.postBody{
+    width: 100%;
+}
+
 #imgDivTitle{
     width: 100%;
     height: 326px;
-
+    margin-bottom: 4rem;
+    border:0;
 }
-#imgTitle{
-    
-    width:fit-content;
-    height:fit-content;
-    background-color: magenta;
 
-    
+#imgTitle{   
+    width:100%;
+    height:100%;
+    object-fit:scale-down;
+    outline: none;
+}
+
+#previewTitle{
+    width: auto;
+    word-wrap: break-word;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 2rem 5rem;
+}
+
+#hashtPost {
+        margin-left: 5rem;
+        margin-bottom: 3rem;
+    li {    
+    list-style: none;
+    margin-right: 2rem;
+    opacity: 70%;
+    }
+}
+
+#imgDiv{
+    width: 50%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 4rem;
+    overflow: hidden;
+}
+
+#imgContentPreview{
+    width:100%;
+    height:100%;
+    object-fit:scale-down;
+}
+
+#contentPreview{
+    width: 80%;
+    height: auto;
+    margin: 3rem auto;
+    word-wrap: break-word;
 }
