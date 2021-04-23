@@ -18,7 +18,7 @@ $(() => {
   $('.nav .an').click( event => {
     event.preventDefault()
     let view = event.target.dataset.viewTarget 
-    let url = `/src/views/${view}.html`
+    let url = `views/${view}.html`
     $(".nav-item").removeClass("active")
     $(event.target).closest(".nav-item").addClass("active")
     loadView( url, view )
