@@ -44,10 +44,13 @@ const savePost = (variableObject) => {
 }
 
 let postData = {};
+
 let postEdit = function () {
     $(' form input[type="text"] ').each(function(){
         //console.log(this)
-        postData[this.name] = this.value;   
+        postData[this.name] = this.value;
+
+   
     }) 
     //console.log(postData)
 }
@@ -69,7 +72,7 @@ $(() => {
 
     $('#homePostEdit').click( ( )    => {
         $('.cardPostInput').load('editPost.html', ()=>{
-    
+            $('.asideContent').removeClass("d-none")
             $(' form input[name="postTitle"] ').click(() => {
                 $('.asideContent').load('title-post.html')
             })
@@ -84,8 +87,11 @@ $(() => {
     $('#homePostPreview').click(() =>{
         postEdit();
         $('.cardPostInput').load('previewPost.html')
+        $('.asideContent').addClass("d-none")
  
     })
 })
+let tags;
+let hashtFuction;
 
 

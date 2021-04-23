@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../assets/font-awesome/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+
   <link rel="stylesheet" href="/assets/styles/styles.css">
 
   <title>Write a new post</title>
@@ -25,7 +26,7 @@
     <div>
       <ul class="navbar-nav d-flex flex-row mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" id="homePostEdit" href="#">Edit <span class="sr-only">(current)</span></a>
+          <a class="nav-link" id="homePostEdit" href="#">Edit <span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="homePostPreview" href="#">Preview</a>
@@ -33,9 +34,9 @@
       </ul>
     </div>
     <div>
-      <a href="">
+      <button type="button" class="btn " data-toggle="modal" data-target="#exampleModal">
         <img src="/Images/post/Tx.svg" alt="">
-      </a>
+      </button>
     </div>
   </nav>
   <!-- -- -- -- -- Container -- -- -- -- -- -->
@@ -43,27 +44,47 @@
     <div class="row">
       <div class="col-8 cardPostInput p-0 rounded-lg">
 
-        
       </div>
       <!-- aside -->
       <div class="col-4 asideContent">
 
       </div>
-
     </div>
-    
+    <!-- Button trigger modal -->
+
     <!-- footer -->
     <div clas="row">
       <div class="col-12">
         <button class="btn btn-primary" type="button" id="publish" class="btn btn-outline-dark">Publish</button>
         <button class="btn btn-secondary" type="button" id="saveDraft" class="btn btn-outline-dark">Save Draft</button>
-        <button class="btn btn-outline-success" type="button">X</button>
+        <button id="settingsBtn" class="btn btn-outline-success" type="button"></button>
         <a href="">Revert new changes</a>
       </div>
     </div>
 
   </div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">You have unsaved changes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        You've made changes to your post. Do you want to navigate to leave this page?
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="btn btn-secondary" href="../../index.html" >Yes, leave the page</a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">No, keep editing</button>
+      </div> 
+    </div>
+  </div>
+</div>
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"

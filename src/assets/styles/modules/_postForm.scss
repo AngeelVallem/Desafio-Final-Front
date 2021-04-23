@@ -92,3 +92,12 @@ body{
 :focus{
     outline: none;
 }
+
+#settingsBtn {
+    background-image: url(/Images/post/Tassetsvg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 35px;
+    height: 35px;
+    border: none;
+}
