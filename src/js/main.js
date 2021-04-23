@@ -39,8 +39,7 @@ $(() => {
       $("#container-data").load(url, () => {
         switch (view) {
           case "week":
-            printPost(getPostByWeek());
-
+              printPost(getPostByWeek());
             break;
 
           case "month":
@@ -328,8 +327,12 @@ const filterByTitle = () => {
 
     if (searchString == "") {
       printPost(completeCollection);
+      $("#posts-container .post .cover-img ").addClass("d-none");
+    $("#posts-container .post .cover-img ").first().addClass("d-block");
     }
   }
+
+  $(".link").click(getPostByKey);
 };
 
 $("#search-title").keyup(filterByTitle);
