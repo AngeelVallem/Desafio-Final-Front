@@ -18,14 +18,14 @@
 
 <body>
   <!-- -- -- -- --Navbar-- -- -- -- -- -->
-  <nav class="navbar d-flex navbar-light navbarPost ">
-    <div>
+  <nav class="navbar d-flex navbar-light navbarPost  ">
+    <div id="logoDev">
       <a href="/index.html"><img class="link-home mr-3 d-none d-md-inline-block" src="/Images/post/Tdev.svg" alt="home"></a>
       <h2 class="navbar-brand d-none d-sm-inline-block ">Write a new post</h2>
     </div>
     <div>
       <ul class="navbar-nav  d-flex flex-row ">
-        <li class="nav-item active">
+        <li class="nav-item ">
           <a class="nav-link" id="homePostEdit" href="#">Edit <span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
@@ -35,7 +35,7 @@
     </div>
     <div class="m-0">
       <button type="button" class="btn " data-toggle="modal" data-target="#exampleModal">
-        <img src="/src/Images/post/Tx.svg" alt="">
+        <img src="/Images/post/Tx.svg" alt="">
       </button>
     </div>
   </nav>
@@ -57,8 +57,8 @@
       <div class="col-12 footerPost">
         <button class="btn btn-primary" type="button" id="publish" class="btn btn-outline-dark ">Publish</button>
         <button class="btn btn-secondary" type="button" id="saveDraft" class="btn btn-outline-dark">Save  <a href="" class="d-none">draft</a></button>
-        <button id="settingsBtn" class="btn btn-outline-success" type="button"></button>
-        <a href="">Revert</a><a href="" class="d-none"> new changes</a>
+        <button id="settingsBtn" class="btn" type="button"></button>
+        <a href="">Revert</a><a href="" class="d-none d-md-inline-block"> new changes</a>
       </div>
     </div>
 

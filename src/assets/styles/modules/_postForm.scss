@@ -5,6 +5,11 @@ body{
     background-color: #eef0f1;    
 }
 
+a{
+    color: black!important;
+    opacity: 80%;
+}
+
 .link-home{
     &:hover{
         cursor: pointer;
@@ -18,7 +23,6 @@ body{
     font-weight: 600;
     border: solid 3px rgba(#000, .2);
     padding: .5rem ;
-    //margin: 2rem 4rem;
 }
 .formPost input[name="coverUrl"]:focus{
     background-color: #eef0f1;
@@ -37,9 +41,6 @@ body{
 .formPost input[name="postTitle"]
 {   
     border: none;
-   // font-size: 3.7rem;
-    //font-weight: 800;
-    //margin: 2rem 4rem;
 }
 :focus{
     outline: none;
@@ -50,10 +51,8 @@ body{
 
 .formPost input[name="postTags"]{   
     border: none;
-    //font-size: 1.3rem;
     font-weight: 450;
     font-family: 'Roboto Mono', monospace;
-    //margin: 2rem 4rem;
 }
 :focus{
     outline: none;
@@ -63,14 +62,9 @@ body{
 {   
     background-image: url(/Images/post/Timgsvg.svg);
     background-repeat: no-repeat;
-    //background-size: 35px;
-    //background-position-x: 4rem;
-    //background-position-y: 1rem;
     border: none;
-    //font-size: 1.3rem;
     font-weight: 400;
     background-color: #f9fafa;
-    //padding: 1rem 4rem;
 }
 :focus{
     outline: none;
@@ -81,10 +75,8 @@ body{
 
 .formPost input[name="content"]{   
     border: none;
-    //font-size: 1.3rem;
     font-weight: 450;
     font-family: 'Roboto Mono', monospace;
-    //margin: 2rem 4rem;
 }
 :focus{
     outline: none;
@@ -220,11 +212,6 @@ body{
     .footerPost{
         width: 99vw;
         padding: .5rem 0;
-        a{
-            color: black;
-            font-size: .9rem;
-            opacity: 85%;
-        }
     } 
 }
 @media screen and (max-width: 768px) {
@@ -246,7 +233,7 @@ body{
         width:90vw;
     }
     .cardPostInput{
-        height: 70vh;
+        height: 80vh;
     }
     .formPost input[name="coverUrl"]{
         margin: 0 2px 10px 2px;
@@ -290,14 +277,15 @@ body{
         }
     } 
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width:769px), screen and (max-width: 992px) {
     .formPost input[name="coverUrl"]{  
     margin: 2rem 4rem;
 }
 
 .formPost input[name="postTitle"]{   
 
-   font-size: 3.7rem;
+   font-size: 3rem;
+   overflow: scroll;
    font-weight: 800;
    margin: 2rem 4rem;
 }
@@ -322,17 +310,36 @@ body{
     margin: 2rem 4rem;
 }
 
-
 .cardPostInput{
     background-color: white;
     border: solid 1px rgba(#000, .2);
     height: 70vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    margin: 3rem 0;
+    margin: 2rem 0!important;
 }
 
-.postBody{
+.navbarPost{
     width: 100%;
+    padding:.8rem;
+    justify-content: flex-start;
+    #logoDev{
+        margin: 0 14rem 0 5.25rem;
+    }
+    a{
+        margin-right: 1rem;
+    }
+    ul {
+        padding: 0;
+    }
+    
+    li{
+        font-size: 1rem;
+        margin:0 8px;
+    }
+    }
 }
+
+.asideContent{
+    margin-top: 5rem;
 }
