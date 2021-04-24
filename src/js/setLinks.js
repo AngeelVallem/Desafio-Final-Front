@@ -11,9 +11,7 @@ $(() => {
 
 
 
-  $('#feed').click(() => {
-    window.location.replace("index.html");
-  })
+
 
   $('.nav .an').click( event => {
     event.preventDefault()
@@ -28,6 +26,12 @@ $(() => {
 const loadView = (url, view) => {
     $("#container-data").load(url, () => {
       switch (view) {
+
+        case "feed":
+          printPost(createCompleteCollection());
+
+          break;
+
         case "week":
           printPost(getPostByWeek());
 

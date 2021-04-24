@@ -24,9 +24,6 @@ $(() => {
   });
 
   setTimeout(() => {
-    $("#feed").click(() => {
-      window.location.replace("index.html");
-    });
 
     $(".nav .an").click((event) => {
       event.preventDefault();
@@ -38,31 +35,37 @@ $(() => {
     });
 
     const loadView = (view) => {
-        switch (view) {
-          case "week":
-            printPost(getPostByWeek());
- 
-            break;
+      switch (view) {
 
-          case "month":
-            printPost(getPostByMonth());
-            break;
+        case "feed":
+          printPost(createCompleteCollection());
 
-          case "year":
-            printPost(getPostByYear());
-            break;
+          break;
 
-          case "infinity":
-            printPost(createCompleteCollection());
-            break;
 
-          case "lastest":
-            printPost(createCompleteCollection());
-            break;
+        case "week":
+          printPost(getPostByWeek());
 
-          default:
-        }
-     
+          break;
+
+        case "month":
+          printPost(getPostByMonth());
+          break;
+
+        case "year":
+          printPost(getPostByYear());
+          break;
+
+        case "infinity":
+          printPost(createCompleteCollection());
+          break;
+
+        case "lastest":
+          printPost(createCompleteCollection());
+          break;
+
+        default:
+      }
     };
   }, 100);
 
@@ -418,7 +421,7 @@ const changeDate = (key) => {
 const filterSelect = (event) => {
   switch (event.target.value) {
     case feed:
-      window.location.replace("index.html");
+      printPost(completeCollection);
       break;
 
     case "feed":
@@ -433,15 +436,15 @@ const filterSelect = (event) => {
       printPost(getPostByMonth());
       break;
 
-      case "year":
+    case "year":
       printPost(getPostByYear());
       break;
 
-      case "infinity":
+    case "infinity":
       printPost(completeCollection);
       break;
 
-      case "lastest":
+    case "lastest":
       printPost(completeCollection);
       break;
 
@@ -450,6 +453,6 @@ const filterSelect = (event) => {
   }
 };
 
-$('#searching').click(() => {
-  $('#search-title').toggleClass("d-none")
-})
+$("#searching").click(() => {
+  $("#search-title").toggleClass("d-none");
+});
