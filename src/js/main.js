@@ -19,6 +19,8 @@ $(() => {
 
     mostLikedPost();
     $("#liked-post").text(`Most liked post : (${postArray})`);
+
+    $("#select-nav").change(filterSelect);
   });
 
   setTimeout(() => {
@@ -32,15 +34,14 @@ $(() => {
       let url = `/src/views/${view}.html`;
       $(".nav-link").removeClass("active");
       $(event.target).closest(".nav-link").addClass("active");
-      loadView(url, view);
+      loadView(view);
     });
 
-    const loadView = (url, view) => {
-      $("#container-data").load(url, () => {
+    const loadView = (view) => {
         switch (view) {
           case "week":
-              printPost(getPostByWeek());
-              console.log(url);
+            printPost(getPostByWeek());
+ 
             break;
 
           case "month":
@@ -48,7 +49,7 @@ $(() => {
             break;
 
           case "year":
-             printPost(getPostByYear())
+            printPost(getPostByYear());
             break;
 
           case "infinity":
@@ -61,7 +62,7 @@ $(() => {
 
           default:
         }
-      });
+     
     };
   }, 100);
 
@@ -151,7 +152,7 @@ const printPost = (data) => {
       postTitle,
       replies,
       likes,
-      year
+      year,
     } = data[key];
 
     let post = `
@@ -191,7 +192,6 @@ const printPost = (data) => {
      </div>
    </div>
    <div class="d-flex align-items-center">
-     <p class="mb-0">6 min read</p>
      <button class="ml-2 btn btn-grey">Save</button>
    </div>
  </div>
@@ -315,7 +315,6 @@ const filterByTitle = () => {
      </div>
    </div>
    <div class="d-flex align-items-center">
-     <p class="mb-0">6 min read</p>
      <button class="ml-2 btn btn-grey">Save</button>
    </div>
  </div>
@@ -329,7 +328,7 @@ const filterByTitle = () => {
     if (searchString == "") {
       printPost(completeCollection);
       $("#posts-container .post .cover-img ").addClass("d-none");
-    $("#posts-container .post .cover-img ").first().addClass("d-block");
+      $("#posts-container .post .cover-img ").first().addClass("d-block");
     }
   }
 
@@ -396,10 +395,9 @@ const getPostByYear = () => {
   for (key in yearPosts) {
     let { year } = yearPosts[key];
 
-    if(year == 20){
-          postsReturn[key] = yearPosts[key]
+    if (year == 20) {
+      postsReturn[key] = yearPosts[key];
     }
-   
   }
   return postsReturn;
 };
@@ -416,3 +414,42 @@ const changeDate = (key) => {
     async: false,
   });
 };
+
+const filterSelect = (event) => {
+  switch (event.target.value) {
+    case feed:
+      window.location.replace("index.html");
+      break;
+
+    case "feed":
+      printPost(completeCollection);
+      break;
+
+    case "week":
+      printPost(getPostByWeek());
+      break;
+
+    case "month":
+      printPost(getPostByMonth());
+      break;
+
+      case "year":
+      printPost(getPostByYear());
+      break;
+
+      case "infinity":
+      printPost(completeCollection);
+      break;
+
+      case "lastest":
+      printPost(completeCollection);
+      break;
+
+    default:
+      break;
+  }
+};
+
+$('#searching').click(() => {
+  $('#search-title').toggleClass("d-none")
+})
