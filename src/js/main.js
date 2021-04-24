@@ -39,29 +39,39 @@ $(() => {
 
         case "feed":
           printPost(createCompleteCollection());
-
+          $("#posts-container .post .cover-img ").addClass("d-none");
+          $("#posts-container .post .cover-img ").first().addClass("d-block");
           break;
 
 
         case "week":
           printPost(getPostByWeek());
-
+          $("#posts-container .post .cover-img ").addClass("d-none");
+          $("#posts-container .post .cover-img ").first().addClass("d-block");
           break;
 
         case "month":
           printPost(getPostByMonth());
+          $("#posts-container .post .cover-img ").addClass("d-none");
+          $("#posts-container .post .cover-img ").first().addClass("d-block");
           break;
 
         case "year":
           printPost(getPostByYear());
+          $("#posts-container .post .cover-img ").addClass("d-none");
+          $("#posts-container .post .cover-img ").first().addClass("d-block");
           break;
 
         case "infinity":
           printPost(createCompleteCollection());
+          $("#posts-container .post .cover-img ").addClass("d-none");
+          $("#posts-container .post .cover-img ").first().addClass("d-block");
           break;
 
         case "lastest":
           printPost(createCompleteCollection());
+          $("#posts-container .post .cover-img ").addClass("d-none");
+          $("#posts-container .post .cover-img ").first().addClass("d-block");
           break;
 
         default:
@@ -422,30 +432,44 @@ const filterSelect = (event) => {
   switch (event.target.value) {
     case feed:
       printPost(completeCollection);
+      $("#posts-container .post .cover-img ").addClass("d-none");
+      $("#posts-container .post .cover-img ").first().addClass("d-block");
       break;
 
     case "feed":
       printPost(completeCollection);
+      $("#posts-container .post .cover-img ").addClass("d-none");
+      $("#posts-container .post .cover-img ").first().addClass("d-block");
       break;
 
     case "week":
       printPost(getPostByWeek());
+      $("#posts-container .post .cover-img ").addClass("d-none");
+      $("#posts-container .post .cover-img ").first().addClass("d-block");
       break;
 
     case "month":
       printPost(getPostByMonth());
+      $("#posts-container .post .cover-img ").addClass("d-none");
+      $("#posts-container .post .cover-img ").first().addClass("d-block");
       break;
 
     case "year":
       printPost(getPostByYear());
+      $("#posts-container .post .cover-img ").addClass("d-none");
+      $("#posts-container .post .cover-img ").first().addClass("d-block");
       break;
 
     case "infinity":
       printPost(completeCollection);
+      $("#posts-container .post .cover-img ").addClass("d-none");
+      $("#posts-container .post .cover-img ").first().addClass("d-block");
       break;
 
     case "lastest":
       printPost(completeCollection);
+      $("#posts-container .post .cover-img ").addClass("d-none");
+      $("#posts-container .post .cover-img ").first().addClass("d-block");
       break;
 
     default:
