@@ -536,6 +536,11 @@ body {
   background-color: #eef0f1;
 }
 
+a {
+  color: black !important;
+  opacity: 80%;
+}
+
 .link-home:hover {
   cursor: pointer;
 }
@@ -806,11 +811,6 @@ body {
     width: 99vw;
     padding: .5rem 0;
   }
-  .footerPost a {
-    color: black;
-    font-size: .9rem;
-    opacity: 85%;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -832,7 +832,7 @@ body {
     width: 90vw;
   }
   .cardPostInput {
-    height: 70vh;
+    height: 80vh;
   }
   .formPost input[name="coverUrl"] {
     margin: 0 2px 10px 2px;
@@ -888,12 +888,13 @@ body {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 769px), screen and (max-width: 992px) {
   .formPost input[name="coverUrl"] {
     margin: 2rem 4rem;
   }
   .formPost input[name="postTitle"] {
-    font-size: 3.7rem;
+    font-size: 3rem;
+    overflow: scroll;
     font-weight: 800;
     margin: 2rem 4rem;
   }
@@ -918,11 +919,32 @@ body {
     height: 70vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    margin: 3rem 0;
+    margin: 2rem 0 !important;
   }
-  .postBody {
+  .navbarPost {
     width: 100%;
+    padding: .8rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
+  .navbarPost #logoDev {
+    margin: 0 14rem 0 5.25rem;
+  }
+  .navbarPost a {
+    margin-right: 1rem;
+  }
+  .navbarPost ul {
+    padding: 0;
+  }
+  .navbarPost li {
+    font-size: 1rem;
+    margin: 0 8px;
+  }
+}
+
+.asideContent {
+  margin-top: 5rem;
 }
 
 * {
