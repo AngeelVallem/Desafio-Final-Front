@@ -955,6 +955,7 @@ a {
 }
 
 #homee {
+  position: relative;
   background-color: #eef0f1;
 }
 
@@ -1272,5 +1273,50 @@ header .nav .nav-item .active:hover::after {
   .post .post-interactions .interactions {
     width: 20rem;
   }
+}
+
+.chat-container {
+  position: fixed;
+  bottom: 8%;
+  z-index: 10000;
+  left: 93%;
+  margin-right: 30px;
+}
+
+.chat-container #chat {
+  position: relative;
+}
+
+.chat-container #chat:hover {
+  cursor: pointer;
+  color: #323ebe;
+}
+
+.chat-container #chat-interactions {
+  position: absolute;
+  bottom: 100%;
+  right: 1px;
+  width: 320px;
+  height: 250px;
+  color: #000;
+}
+
+.chat-container #chat-interactions .messages-container {
+  overflow: scroll;
+  position: relative;
+}
+
+.chat-container #chat-interactions .messages-container #close-chat {
+  position: fixed;
+  left: 90%;
+}
+
+.chat-container #chat-interactions .messages-container #close-chat:hover {
+  cursor: pointer;
+  color: #b83a3a;
+}
+
+.chat-container #chat-interactions .messages-container ul {
+  list-style: none;
 }
 /*# sourceMappingURL=styles.css.map */

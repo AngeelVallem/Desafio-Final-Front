@@ -9,8 +9,9 @@
   integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
   <link rel="stylesheet" href="assets/styles/styles.css" />
   <link rel="stylesheet" href="assets/font-awesome/css/all.min.css" />
-
-
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+  <!-- Firebase database -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-database.js"></script>
   <title>Desafío Final front</title>
 </head>
 
@@ -97,7 +98,7 @@
         <img id="searching" class="mr-4 d-sm-none" src="Images/img-nav/lupa.svg" alt="Search">
       </div>
       <div class="img-wrpr">
-        <img class="mr-4 mr-sm-2 mr-lg-4" src="Images/img-nav/chat.svg" alt="Msg">
+        <img  class="mr-4 mr-sm-2 mr-lg-4" src="Images/img-nav/chat.svg" alt="Msg">
       </div>
       <div class="img-wrpr">
         <img class="mr-2 mr-sm-0 mr-lg-2" src="Images/img-nav/notif.svg" alt="Ntf">
@@ -116,7 +117,23 @@
   <!-- content -->
   <div id="container-data" class="container-fluid container-lg">
 
+
   </div>
+
+<div class="chat-container d-none d-lg-block">
+  <div id="chat-interactions" class="card mr-5">
+    <div class="messages-container">
+      <i id="close-chat" class="fas fa-times mt-2"></i>
+      <ul id="messages">
+
+      </ul>
+    </div>
+    <input id="message" class="form-control">
+  </div>
+  <i id="chat" class="fas fa-comment-dots fa-3x fa-flip-horizontal"></i>
+</div>
+
+  
 
   <!-- Footer -->
   <footer class="container-fluid bg-footer-primary border-bottom position-relative mt-3">
@@ -183,6 +200,8 @@
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="js/firebaseConfig.js"></script>
+  <script src="js/chat.js"></script>
   <script src="js/main.js"></script>
 </body>
 

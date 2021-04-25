@@ -1,0 +1,46 @@
+.chat-container {
+    position: fixed;
+    bottom: 8%;
+    z-index: 10000;
+    left: 93%;
+    margin-right: 30px;
+
+
+    #chat {
+        position: relative;
+
+        &:hover {
+            cursor: pointer;
+            color: $blue;
+        }
+    }
+
+    #chat-interactions {
+        position: absolute;
+        bottom: 100%;
+        right: 1px;
+        width: 320px;
+        height: 250px;
+        color: #000;
+
+        .messages-container{
+            overflow: scroll;
+            position: relative;
+
+            #close-chat{
+                position: fixed;
+                left: 90%;
+
+                &:hover{
+                    cursor: pointer;
+                    color: rgb(184, 58, 58);
+                }
+            }
+
+        ul{
+                list-style: none;
+            }
+        }
+    }
+    
+}

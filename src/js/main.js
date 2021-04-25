@@ -480,3 +480,14 @@ const filterSelect = (event) => {
 $("#searching").click(() => {
   $("#search-title").toggleClass("d-none");
 });
+
+$('#chat-interactions').hide()
+
+$('#chat').click(() => {
+  validatePrompt()
+  $('#chat-interactions').show("slow")
+})
+
+$('#close-chat').click(() => {
+  $('#chat-interactions').hide("slow")
+})
