@@ -27,6 +27,7 @@ const sendMessage = (event) => {
     firebase.database().ref("messages").push().set({
       sender: input,
       message: message.val(),
+      time : moment().format('h:mm:ss a')
     });
 
     message.val("");
@@ -40,11 +41,10 @@ $("#message").keyup(sendMessage);
 firebase
   .database()
   .ref("messages")
-  .on("child_added", (snapshot) => {
-    let msg = "";
-    msg += "<li>";
-    msg += `${snapshot.val().sender} : ${snapshot.val().message}`;
-    msg += "</li>";
+  .on("child_added", snapshot => {
 
-    document.getElementById("messages").innerHTML += msg;
+    let msg = `<li> ${snapshot.val().sender} : ${snapshot.val().message}  -<small class="pl-2">${snapshot.val().time}</small> </li> `;
+
+
+    $('#messages').append(msg)
   });
